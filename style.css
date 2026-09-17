@@ -629,41 +629,6 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
 }
 
 /* ==========================================================================
-   QR concept
-   ========================================================================== */
-.qr-concept { background: var(--paper-raised); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.qr-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 3rem;
-  align-items: center;
-}
-.qr-flow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 0.75rem;
-  align-items: center;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--green-800);
-}
-.qr-arrow { color: var(--ink-soft); font-weight: 400; }
-
-.qr-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  text-align: center;
-  position: relative;
-}
-.qr-card .stamp { position: absolute; top: 1.25rem; right: 1.25rem; }
-.qr-card-label { font-size: 0.78rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; margin: 1rem 0 0.25rem; }
-.qr-card-id { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--green-800); margin-bottom: 1.25rem; }
-.qr-visual { display: flex; justify-content: center; margin-bottom: 1rem; }
-.qr-card-note { font-size: 0.78rem; color: var(--ink-soft); margin: 0; }
-
-/* ==========================================================================
    Questions
    ========================================================================== */
 .questions { background: var(--green-800); color: #fff; }
@@ -852,10 +817,7 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
   .post-grid { grid-template-columns: repeat(2, 1fr); }
 
   .registration-grid,
-  .qr-grid,
   .questions-grid { grid-template-columns: 1fr; }
-
-  .qr-grid { gap: 2.5rem; }
 }
 
 @media (max-width: 720px) {
@@ -913,15 +875,13 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
 
 .about,
 .speakers,
-.qr-concept,
 .online-flow,
 .post-grid {
   position: relative;
 }
 
 .about::before,
-.speakers::before,
-.qr-concept::before {
+.speakers::before {
   content: "";
   position: absolute;
   width: 210px;
@@ -933,7 +893,6 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
 
 .about::before { top: 36px; right: -80px; transform: rotate(18deg); }
 .speakers::before { bottom: 28px; left: -100px; transform: rotate(-22deg); }
-.qr-concept::before { top: 45px; left: -110px; transform: rotate(14deg); }
 
 /* Header: softer container geometry */
 .site-header {
@@ -1289,29 +1248,6 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
   background: linear-gradient(90deg, var(--line), rgba(39,135,83,0.45), var(--line));
 }
 
-/* QR card: make it look like an actual pass */
-.qr-card {
-  border-radius: var(--shape-radius-lg);
-  box-shadow: var(--shape-shadow);
-  overflow: hidden;
-}
-
-.qr-card::before,
-.qr-card::after {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border: 1px solid rgba(30,114,69,0.20);
-}
-
-.qr-card::before { left: -1px; top: 42%; border-left: 0; border-radius: 0 12px 12px 0; }
-.qr-card::after { right: -1px; top: 42%; border-right: 0; border-radius: 12px 0 0 12px; }
-
-.qr-visual > * {
-  border-radius: 14px;
-}
-
 /* Questions: deep section with layered card silhouette */
 .questions {
   position: relative;
@@ -1432,8 +1368,7 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
   .speaker-card,
   .post-card,
   .registration-form,
-  .question-form,
-  .qr-card {
+  .question-form {
     border-radius: 18px;
   }
 
@@ -1445,7 +1380,6 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
 
   .about::before,
   .speakers::before,
-  .qr-concept::before,
   .registration::before,
   .questions::before {
     opacity: 0.55;
