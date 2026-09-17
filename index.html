@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharmacists' Day 2026 — Digital Event Portal</title>
+<meta name="description" content="Digital participation and event-management concept for Pharmacists' Day 2026, Sudan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<!-- Toast container -->
+<div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="#top" class="brand" aria-label="Pharmacists' Day 2026 home">
+      <img src="logo.jpeg" alt="Pharmacists' Day 2026 organizing body logo" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-title">Pharmacists&rsquo; Day 2026</span>
+        <span class="brand-subtitle">Digital Event Portal</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#top" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#program" class="nav-link">Program</a>
+      <a href="#speakers" class="nav-link">Speakers</a>
+      <a href="#registration" class="nav-link">Registration</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#registration" class="btn btn-primary btn-small">Register</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="logo.jpeg" alt="" class="hero-emblem" aria-hidden="true">
+      <p class="hero-kicker">Preliminary Concept &middot; Prepared for Organizing Committee Review</p>
+      <h1 class="hero-title">Pharmacists&rsquo; Day 2026</h1>
+      <p class="hero-date">24&ndash;25 September 2026</p>
+      <p class="hero-text">A unified digital experience for registration, attendance, online participation and event communication &mdash; proposed as a single system around the physical event.</p>
+      <div class="hero-actions">
+        <a href="#registration" class="btn btn-primary">Register to Attend</a>
+        <a href="#program" class="btn btn-outline">Explore Program</a>
+      </div>
+
+      <div class="hero-facts">
+        <div class="hero-fact">
+          <span class="hero-fact-num">24&ndash;25</span>
+          <span class="hero-fact-label">September</span>
+        </div>
+        <div class="hero-fact">
+          <span class="hero-fact-num">Hybrid</span>
+          <span class="hero-fact-label">Physical + Online <em>(proposed)</em></span>
+        </div>
+        <div class="hero-fact">
+          <span class="hero-fact-num">Digital</span>
+          <span class="hero-fact-label">Participation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUICK ACTIONS ============ -->
+  <section class="quick-actions">
+    <div class="section-inner quick-actions-grid">
+      <a href="#registration" class="action-card">
+        <span class="action-num">01</span>
+        <h3>Register</h3>
+        <p>Reserve your place and choose how you will attend.</p>
+        <span class="action-go">Go to registration &rarr;</span>
+      </a>
+      <a href="#program" class="action-card">
+        <span class="action-num">02</span>
+        <h3>Program</h3>
+        <p>View sessions, speakers and the event schedule.</p>
+        <span class="action-go">View program &rarr;</span>
+      </a>
+      <button type="button" class="action-card action-card-button" id="join-online-btn">
+        <span class="action-num">03</span>
+        <h3>Join Online</h3>
+        <p>Remote participation through the official event link.</p>
+        <span class="action-go">Check link status &rarr;</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT / DIGITAL CONCEPT ============ -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="about-intro">
+        <p class="eyebrow">The Digital Concept</p>
+        <h2>One event, one digital experience.</h2>
+        <p class="lead">The proposed digital system acts as a simple digital layer around the physical event. Participants register once, organizers receive structured information, and both physical and online audiences have a clear way to participate.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Registration</h3>
+          <p>Collect participant information through a structured digital form.</p>
+          <span class="badge badge-green">Database Ready</span>
+        </div>
+        <div class="feature-card">
+          <h3>Attendance</h3>
+          <p>Use participant IDs and QR check-in to reduce manual attendance work.</p>
+          <span class="badge badge-green">QR Ready</span>
+        </div>
+        <div class="feature-card">
+          <h3>Interaction</h3>
+          <p>Allow physical and online participants to submit questions to moderators.</p>
+          <span class="badge badge-green">Interaction Ready</span>
+        </div>
+        <div class="feature-card">
+          <h3>Event Record</h3>
+          <p>Keep feedback, resources and event information organized digitally.</p>
+          <span class="badge badge-neutral">Expandable</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAM ============ -->
+  <section class="program" id="program">
+    <div class="section-inner">
+      <div class="program-head">
+        <div>
+          <p class="eyebrow eyebrow-light">Preliminary Program</p>
+          <h2>Program at a glance</h2>
+        </div>
+        <span class="stamp">Draft &mdash; Subject to Confirmation</span>
+      </div>
+
+      <div class="program-tabs" role="tablist" aria-label="Event days">
+        <button class="tab-btn is-active" role="tab" aria-selected="true" data-day="1" id="tab-day-1">24 September &mdash; Day 01</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-day="2" id="tab-day-2">25 September &mdash; Day 02</button>
+      </div>
+
+      <div class="program-panel" id="program-panel" role="tabpanel" aria-labelledby="tab-day-1">
+        <!-- populated by script.js -->
+      </div>
+
+      <p class="program-note">All times, sessions and speakers shown here are placeholders for demonstration purposes and are not yet confirmed by the organizing committee.</p>
+    </div>
+  </section>
+
+  <!-- ============ SPEAKERS ============ -->
+  <section class="speakers" id="speakers">
+    <div class="section-inner">
+      <p class="eyebrow">Preliminary</p>
+      <h2>Speakers &amp; Contributors</h2>
+      <p class="lead">Speaker slots below are placeholders illustrating how confirmed contributors will be presented. Names will be added once confirmed by the organizing committee.</p>
+
+      <div class="speaker-grid">
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">?</div>
+          <h3>Speaker Name</h3>
+          <p>Professional Title / Organization</p>
+          <span class="badge badge-outline">To Be Confirmed</span>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">?</div>
+          <h3>Speaker Name</h3>
+          <p>Professional Title / Organization</p>
+          <span class="badge badge-outline">To Be Confirmed</span>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">?</div>
+          <h3>Speaker Name</h3>
+          <p>Professional Title / Organization</p>
+          <span class="badge badge-outline">To Be Confirmed</span>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">?</div>
+          <h3>Speaker Name</h3>
+          <p>Professional Title / Organization</p>
+          <span class="badge badge-outline">To Be Confirmed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REGISTRATION ============ -->
+  <section class="registration" id="registration">
+    <div class="section-inner registration-grid">
+      <div class="registration-intro">
+        <p class="eyebrow">Registration</p>
+        <h2>Reserve your place</h2>
+        <p class="lead">This is a working demonstration of the registration flow. Submissions are not yet stored in a live database &mdash; each entry is validated, structured, and logged locally so the data model can be reviewed before connecting it to the organizing committee&rsquo;s system.</p>
+
+        <div class="notice-box">
+          <strong>Connected to Supabase</strong>
+          <p>Submissions are written directly to the <code>participants</code> table. Add your project URL and anon key in <code>supabase-config.js</code> to activate it.</p>
+        </div>
+      </div>
+
+      <form class="registration-form" id="registration-form" novalidate>
+        <div class="form-row">
+          <label for="full_name">Full Name</label>
+          <input type="text" id="full_name" name="full_name" placeholder="e.g. Amina Hassan" required>
+          <span class="field-error" data-error-for="full_name"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="profession">Profession</label>
+          <select id="profession" name="profession" required>
+            <option value="" disabled selected>Select your profession</option>
+            <option value="Pharmacist">Pharmacist</option>
+            <option value="Pharmacy Student">Pharmacy Student</option>
+            <option value="Healthcare Professional">Healthcare Professional</option>
+            <option value="Organization Representative">Organization Representative</option>
+            <option value="Guest">Guest</option>
+            <option value="Other">Other</option>
+          </select>
+          <span class="field-error" data-error-for="profession"></span>
+        </div>
+
+        <div class="form-row form-row-split">
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            <span class="field-error" data-error-for="email"></span>
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+249 ..." required>
+            <span class="field-error" data-error-for="phone"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="organization">Organization / Institution</label>
+          <input type="text" id="organization" name="organization" placeholder="e.g. Sudanese Pharmacists Association">
+          <span class="field-error" data-error-for="organization"></span>
+        </div>
+
+        <fieldset class="form-row">
+          <legend>Attendance Type</legend>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="attendance_type" value="Physical" required>
+              <span>Physical</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="attendance_type" value="Online">
+              <span>Online</span>
+            </label>
+          </div>
+          <span class="field-error" data-error-for="attendance_type"></span>
+        </fieldset>
+
+        <div class="form-row form-row-consent">
+          <label class="checkbox-option">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span>I agree that the information provided may be used for event registration and attendance management.</span>
+          </label>
+          <span class="field-error" data-error-for="consent"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Submit Registration</button>
+        <p class="form-footnote">Your details are sent directly to the event database.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ PARTICIPANT WORKFLOW ============ -->
+  <section class="workflow">
+    <div class="section-inner">
+      <p class="eyebrow">Proposed Workflow</p>
+      <h2>From registration to attendance</h2>
+      <p class="lead">A conceptual outline of how a participant would move through the system. Some stages are demonstrated in this prototype; others are proposed for a future version.</p>
+
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <span class="workflow-num">01</span>
+          <h3>Registration</h3>
+          <p>Participant submits details through the form above.</p>
+        </div>
+        <div class="workflow-connector" aria-hidden="true"></div>
+        <div class="workflow-step">
+          <span class="workflow-num">02</span>
+          <h3>Confirmation</h3>
+          <p>Participant receives confirmation and a participant ID.</p>
+        </div>
+        <div class="workflow-connector" aria-hidden="true"></div>
+        <div class="workflow-step">
+          <span class="workflow-num">03</span>
+          <h3>Attendance</h3>
+          <p>Participant checks in at the venue using a QR code.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QR ATTENDANCE CONCEPT ============ -->
+  <section class="qr-concept">
+    <div class="section-inner qr-grid">
+      <div>
+        <p class="eyebrow">Concept Preview</p>
+        <h2>Digital Attendance</h2>
+        <p class="lead">Each registered participant could eventually receive a unique participant ID and QR code. At the venue, staff would scan the code to identify the participant and record attendance automatically.</p>
+        <div class="qr-flow">
+          <span>Scan QR</span>
+          <span class="qr-arrow" aria-hidden="true">&rarr;</span>
+          <span>Identify Participant</span>
+          <span class="qr-arrow" aria-hidden="true">&rarr;</span>
+          <span>Record Attendance</span>
+        </div>
+      </div>
+
+      <div class="qr-card">
+        <span class="stamp stamp-small">Concept Preview</span>
+        <p class="qr-card-label">Participant ID</p>
+        <p class="qr-card-id" id="qr-preview-id">PH26-001284</p>
+        <div class="qr-visual" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="120" height="120">
+            <rect width="100" height="100" fill="var(--paper)"/>
+            <g fill="var(--ink)">
+              <rect x="6" y="6" width="24" height="24"/><rect x="12" y="12" width="12" height="12" fill="var(--paper)"/>
+              <rect x="70" y="6" width="24" height="24"/><rect x="76" y="12" width="12" height="12" fill="var(--paper)"/>
+              <rect x="6" y="70" width="24" height="24"/><rect x="12" y="76" width="12" height="12" fill="var(--paper)"/>
+              <rect x="38" y="10" width="6" height="6"/><rect x="50" y="10" width="6" height="6"/><rect x="38" y="22" width="6" height="6"/>
+              <rect x="10" y="40" width="6" height="6"/><rect x="22" y="40" width="6" height="6"/><rect x="10" y="52" width="6" height="6"/>
+              <rect x="40" y="42" width="6" height="6"/><rect x="52" y="42" width="6" height="6"/><rect x="46" y="54" width="6" height="6"/>
+              <rect x="40" y="60" width="6" height="6"/><rect x="60" y="60" width="6" height="6"/>
+              <rect x="70" y="40" width="6" height="6"/><rect x="82" y="40" width="6" height="6"/><rect x="70" y="52" width="6" height="6"/>
+              <rect x="70" y="70" width="6" height="6"/><rect x="82" y="70" width="6" height="6"/><rect x="70" y="82" width="6" height="6"/><rect x="82" y="82" width="6" height="6"/><rect x="58" y="82" width="6" height="6"/>
+            </g>
+          </svg>
+        </div>
+        <p class="qr-card-note">Illustrative pattern only &mdash; not a functional QR code.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUESTIONS / INTERACTION ============ -->
+  <section class="questions" id="questions">
+    <div class="section-inner questions-grid">
+      <div>
+        <p class="eyebrow">Interaction</p>
+        <h2>Ask a Question</h2>
+        <p class="lead">In a future version, physical and online participants could submit questions to session moderators directly through this portal. The form below demonstrates the intended flow.</p>
+      </div>
+
+      <form class="question-form" id="question-form">
+        <div class="form-row">
+          <label for="q_name">Name</label>
+          <input type="text" id="q_name" name="name" placeholder="Your name">
+        </div>
+        <div class="form-row">
+          <label for="q_session">Session</label>
+          <select id="q_session" name="session">
+            <option value="" disabled selected>Select a session</option>
+            <option value="Day 1 — Keynote Session">Day 1 &mdash; Keynote Session</option>
+            <option value="Day 1 — Professional Panel">Day 1 &mdash; Professional Panel</option>
+            <option value="Day 2 — Scientific Session">Day 2 &mdash; Scientific Session</option>
+            <option value="Day 2 — Workshop">Day 2 &mdash; Workshop</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="q_question">Question</label>
+          <textarea id="q_question" name="question" rows="3" placeholder="Write your question" required></textarea>
+        </div>
+        <label class="checkbox-option checkbox-inline">
+          <input type="checkbox" id="q_anonymous" name="anonymous">
+          <span>Submit anonymously</span>
+        </label>
+        <button type="submit" class="btn btn-outline-light btn-full">Submit Question</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ ONLINE PARTICIPATION ============ -->
+  <section class="online" id="online">
+    <div class="section-inner">
+      <p class="eyebrow">Proposed Hybrid Model</p>
+      <h2>Physical + Online Participation</h2>
+      <p class="lead">The proposed system allows selected sessions, speakers or participants to take part remotely while the main event continues physically at the venue.</p>
+
+      <div class="online-flow">
+        <div class="online-flow-item">Event Program</div>
+        <div class="online-flow-item">Online Session</div>
+        <div class="online-flow-item online-flow-item-muted">Meeting Link<br><span>Online link will be published</span></div>
+        <div class="online-flow-item">Moderator</div>
+        <div class="online-flow-item">Questions</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POST-EVENT SYSTEM ============ -->
+  <section class="post-event">
+    <div class="section-inner">
+      <p class="eyebrow">After the Event</p>
+      <h2>What happens next</h2>
+
+      <div class="post-grid">
+        <div class="post-card">
+          <h3>Feedback</h3>
+          <p>Participants could submit feedback about:</p>
+          <ul>
+            <li>Event organization</li>
+            <li>Scientific content</li>
+            <li>Speakers</li>
+            <li>Online experience</li>
+          </ul>
+          <span class="stamp stamp-small">Future Extension</span>
+        </div>
+        <div class="post-card">
+          <h3>Certificates</h3>
+          <p>A future version could provide digitally verifiable certificates.</p>
+          <div class="cert-preview">
+            <span>Certificate ID</span>
+            <strong>PH26-CERT-001284</strong>
+            <span>QR Verification</span>
+          </div>
+          <span class="stamp stamp-small">Future Extension</span>
+        </div>
+        <div class="post-card">
+          <h3>Digital Archive</h3>
+          <p>A future event archive could contain photos, videos, presentations, documents and event information.</p>
+          <span class="stamp stamp-small">Future Extension</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <img src="logo.jpeg" alt="Pharmacists' Day 2026 organizing body logo" class="footer-logo">
+      <p class="footer-title">Pharmacists&rsquo; Day 2026</p>
+      <p class="footer-date">24&ndash;25 September 2026</p>
+    </div>
+    <div class="footer-tags">
+      <span>Physical + Online</span>
+      <span>Digital Registration</span>
+      <span>QR Attendance</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Digital portal concept prepared for committee review &middot; Preliminary prototype, not an official publication.</p>
+  </div>
+</footer>
+
+<script src="supabase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
