@@ -319,7 +319,7 @@ function initQuestionForm() {
 
     const isAnonymous = formData.get("anonymous") === "on";
     const questionEntry = {
-      name: isAnonymous ? null : (formData.get("name") || "").toString().trim() || null,
+      name: isAnonymous ? "anonymous" : (formData.get("name") || "").toString().trim() || null,
       session: (formData.get("session") || "").toString().trim() || null,
       question,
       anonymous: isAnonymous,
