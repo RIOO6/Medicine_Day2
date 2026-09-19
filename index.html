@@ -23,20 +23,21 @@
       <img src="logo.jpeg" alt="Pharmacists' Day 2026 organizing body logo" class="brand-logo">
       <span class="brand-text">
         <span class="brand-title">Pharmacists&rsquo; Day 2026</span>
-        <span class="brand-subtitle">Digital Event Portal</span>
+        <span class="brand-subtitle" data-i18n="brand_subtitle">Digital Event Portal</span>
       </span>
     </a>
 
     <nav class="main-nav" id="main-nav">
-      <a href="#top" class="nav-link">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#program" class="nav-link">Program</a>
-      <a href="#speakers" class="nav-link">Speakers</a>
-      <a href="#registration" class="nav-link">Registration</a>
+      <a href="#top" class="nav-link" data-i18n="nav_home">Home</a>
+      <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+      <a href="#program" class="nav-link" data-i18n="nav_program">Program</a>
+      <a href="#speakers" class="nav-link" data-i18n="nav_speakers">Speakers</a>
+      <a href="#registration" class="nav-link" data-i18n="nav_register">Registration</a>
     </nav>
 
     <div class="header-actions">
-      <a href="#registration" class="btn btn-primary btn-small">Register</a>
+      <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Switch language">AR</button>
+      <a href="#registration" class="btn btn-primary btn-small" data-i18n="cta_register">Register</a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span>
       </button>
@@ -50,27 +51,27 @@
   <section class="hero">
     <div class="hero-inner">
       <img src="logo.jpeg" alt="" class="hero-emblem" aria-hidden="true">
-      <p class="hero-kicker">Annual event for pharmacists and healthcare leaders</p>
+      <p class="hero-kicker" data-i18n="hero_kicker">Annual event for pharmacists and healthcare leaders</p>
       <h1 class="hero-title">Pharmacists&rsquo; Day 2026</h1>
-      <p class="hero-date">24 September 2026</p>
-      <p class="hero-text">A memorable day of professional exchange, scientific insight, networking, and collaboration for the pharmacy and healthcare community.</p>
+      <p class="hero-date" data-i18n="hero_date">24 September 2026</p>
+      <p class="hero-text" data-i18n="hero_text">A memorable day of professional exchange, scientific insight, networking, and collaboration for the pharmacy and healthcare community.</p>
       <div class="hero-actions">
-        <a href="#registration" class="btn btn-primary">Register to Attend</a>
-        <a href="#program" class="btn btn-outline">Explore Program</a>
+        <a href="#registration" class="btn btn-primary" data-i18n="hero_register">Register to Attend</a>
+        <a href="#program" class="btn btn-outline" data-i18n="hero_program">Explore Program</a>
       </div>
 
       <div class="hero-facts">
         <div class="hero-fact">
           <span class="hero-fact-num">24</span>
-          <span class="hero-fact-label">September</span>
+          <span class="hero-fact-label" data-i18n="fact_september">September</span>
         </div>
         <div class="hero-fact">
-          <span class="hero-fact-num">Hybrid</span>
-          <span class="hero-fact-label">Physical + Online <em>(proposed)</em></span>
+          <span class="hero-fact-num" data-i18n="fact_hybrid_label">Hybrid</span>
+          <span class="hero-fact-label"><span data-i18n="fact_hybrid_text">Physical + Online</span> <em data-i18n="fact_hybrid_note">(proposed)</em></span>
         </div>
         <div class="hero-fact">
-          <span class="hero-fact-num">Digital</span>
-          <span class="hero-fact-label">Participation</span>
+          <span class="hero-fact-num" data-i18n="fact_digital_label">Digital</span>
+          <span class="hero-fact-label" data-i18n="fact_digital_text">Participation</span>
         </div>
       </div>
     </div>
@@ -81,22 +82,22 @@
     <div class="section-inner quick-actions-grid">
       <a href="#registration" class="action-card">
         <span class="action-num">01</span>
-        <h3>Register</h3>
-        <p>Reserve your place and choose how you will attend.</p>
-        <span class="action-go">Go to registration &rarr;</span>
+        <h3 data-i18n="qa_register_title">Register</h3>
+        <p data-i18n="qa_register_text">Reserve your place and choose how you will attend.</p>
+        <span class="action-go" data-i18n="qa_register_link">Go to registration &rarr;</span>
       </a>
       <a href="#program" class="action-card">
         <span class="action-num">02</span>
-        <h3>Program</h3>
-        <p>View sessions, speakers and the event schedule.</p>
-        <span class="action-go">View program &rarr;</span>
+        <h3 data-i18n="qa_program_title">Program</h3>
+        <p data-i18n="qa_program_text">View sessions, speakers and the event schedule.</p>
+        <span class="action-go" data-i18n="qa_program_link">View program &rarr;</span>
       </a>
-      <button type="button" class="action-card action-card-button" id="join-online-btn">
+      <a href="#online" class="action-card">
         <span class="action-num">03</span>
-        <h3>Join Online</h3>
-        <p>Remote participation through the official event link.</p>
-        <span class="action-go">Check link status &rarr;</span>
-      </button>
+        <h3 data-i18n="qa_media_title">Event Media</h3>
+        <p data-i18n="qa_media_text">Photos and videos from the event will be shared here after the day.</p>
+        <span class="action-go" data-i18n="qa_media_link">See media updates &rarr;</span>
+      </a>
     </div>
   </section>
 
@@ -104,31 +105,31 @@
   <section class="about" id="about">
     <div class="section-inner">
       <div class="about-intro">
-        <p class="eyebrow">The Digital Concept</p>
-        <h2>One event, one digital experience.</h2>
-        <p class="lead">The proposed digital system acts as a simple digital layer around the physical event. Participants register once, organizers receive structured information, and both physical and online audiences have a clear way to participate.</p>
+        <p class="eyebrow" data-i18n="about_eyebrow">The Digital Concept</p>
+        <h2 data-i18n="about_title">One event, one digital experience.</h2>
+        <p class="lead" data-i18n="about_text">The proposed digital system acts as a simple digital layer around the physical event. Participants register once, organizers receive structured information, and both physical and online audiences have a clear way to participate.</p>
       </div>
 
       <div class="feature-grid">
         <div class="feature-card">
-          <h3>Registration</h3>
-          <p>Collect participant information through a structured digital form.</p>
-          <span class="badge badge-green">Database Ready</span>
+          <h3 data-i18n="feature_registration_title">Registration</h3>
+          <p data-i18n="feature_registration_text">Collect participant information through a structured digital form.</p>
+          <span class="badge badge-green" data-i18n="feature_registration_badge">Database Ready</span>
         </div>
         <div class="feature-card">
-          <h3>Attendance</h3>
-          <p>Use participant IDs and QR check-in to reduce manual attendance work.</p>
-          <span class="badge badge-green">QR Ready</span>
+          <h3 data-i18n="feature_attendance_title">Attendance</h3>
+          <p data-i18n="feature_attendance_text">Use participant IDs and QR check-in to reduce manual attendance work.</p>
+          <span class="badge badge-green" data-i18n="feature_attendance_badge">QR Ready</span>
         </div>
         <div class="feature-card">
-          <h3>Interaction</h3>
-          <p>Allow physical and online participants to submit questions to moderators.</p>
-          <span class="badge badge-green">Interaction Ready</span>
+          <h3 data-i18n="feature_interaction_title">Interaction</h3>
+          <p data-i18n="feature_interaction_text">Allow physical and online participants to submit questions to moderators.</p>
+          <span class="badge badge-green" data-i18n="feature_interaction_badge">Interaction Ready</span>
         </div>
         <div class="feature-card">
-          <h3>Event Record</h3>
-          <p>Keep feedback, resources and event information organized digitally.</p>
-          <span class="badge badge-neutral">Expandable</span>
+          <h3 data-i18n="feature_record_title">Event Record</h3>
+          <p data-i18n="feature_record_text">Keep feedback, resources and event information organized digitally.</p>
+          <span class="badge badge-neutral" data-i18n="feature_record_badge">Expandable</span>
         </div>
       </div>
     </div>
@@ -139,14 +140,14 @@
     <div class="section-inner">
       <div class="program-head">
         <div>
-          <p class="eyebrow eyebrow-light">Preliminary Program</p>
-          <h2>Program at a glance</h2>
+          <p class="eyebrow eyebrow-light" data-i18n="program_eyebrow">Preliminary Program</p>
+          <h2 data-i18n="program_title">Program at a glance</h2>
         </div>
-        <span class="stamp">Draft &mdash; Subject to Confirmation</span>
+        <span class="stamp" data-i18n="program_stamp">Draft &mdash; Subject to Confirmation</span>
       </div>
 
       <div class="program-tabs" role="tablist" aria-label="Event day">
-        <button class="tab-btn is-active" role="tab" aria-selected="true" data-day="1" id="tab-day-1">24 September &mdash; Event Day</button>
+        <button class="tab-btn is-active" role="tab" aria-selected="true" data-day="1" id="tab-day-1" data-i18n="program_tab_label">24 September &mdash; Event Day</button>
       </div>
 
       <div class="program-panel" id="program-panel" role="tabpanel" aria-labelledby="tab-day-1">
@@ -156,106 +157,104 @@
     </div>
   </section>
 
-  <!-- ============ SPEAKERS ============ -->
   <section class="speakers" id="speakers">
     <div class="section-inner">
-      <p class="eyebrow">Preliminary</p>
-      <h2>Speakers &amp; Contributors</h2>
-      <p class="lead">A distinguished line-up of professionals, educators, and leaders shaping the future of pharmacy practice and healthcare excellence.</p>
+      <p class="eyebrow" data-i18n="speakers_eyebrow">Preliminary</p>
+      <h2 data-i18n="speakers_title">Speakers &amp; Contributors</h2>
+      <p class="lead" data-i18n="speakers_text">A distinguished line-up of professionals, educators, and leaders shaping the future of pharmacy practice and healthcare excellence.</p>
 
       <div class="speaker-grid">
         <div class="speaker-card">
           <div class="speaker-avatar" aria-hidden="true">?</div>
-          <h3>Speaker Name</h3>
-          <p>Professional Title / Organization</p>
-          <span class="badge badge-outline">To Be Confirmed</span>
+          <h3 data-i18n="speaker_name_1">Speaker Name</h3>
+          <p data-i18n="speaker_role_1">Professional Title / Organization</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge">To Be Confirmed</span>
         </div>
         <div class="speaker-card">
           <div class="speaker-avatar" aria-hidden="true">?</div>
-          <h3>Speaker Name</h3>
-          <p>Professional Title / Organization</p>
-          <span class="badge badge-outline">To Be Confirmed</span>
+          <h3 data-i18n="speaker_name_2">Speaker Name</h3>
+          <p data-i18n="speaker_role_2">Professional Title / Organization</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge_2">To Be Confirmed</span>
         </div>
         <div class="speaker-card">
           <div class="speaker-avatar" aria-hidden="true">?</div>
-          <h3>Speaker Name</h3>
-          <p>Professional Title / Organization</p>
-          <span class="badge badge-outline">To Be Confirmed</span>
+          <h3 data-i18n="speaker_name_3">Speaker Name</h3>
+          <p data-i18n="speaker_role_3">Professional Title / Organization</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge_3">To Be Confirmed</span>
         </div>
         <div class="speaker-card">
           <div class="speaker-avatar" aria-hidden="true">?</div>
-          <h3>Speaker Name</h3>
-          <p>Professional Title / Organization</p>
-          <span class="badge badge-outline">To Be Confirmed</span>
+          <h3 data-i18n="speaker_name_4">Speaker Name</h3>
+          <p data-i18n="speaker_role_4">Professional Title / Organization</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge_4">To Be Confirmed</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ REGISTRATION ============ -->
   <section class="registration" id="registration">
     <div class="section-inner registration-grid">
       <div class="registration-intro">
-        <p class="eyebrow">Registration</p>
-        <h2>Reserve your place</h2>
-        <p class="lead">Join pharmacists, students, healthcare professionals, and partners for a focused day of learning, dialogue, and professional connection.</p>
+        <p class="eyebrow" data-i18n="registration_eyebrow">Registration</p>
+        <h2 data-i18n="registration_title">Reserve your place</h2>
+        <p class="lead" data-i18n="registration_text">Join pharmacists, students, healthcare professionals, and partners for a focused day of learning, dialogue, and professional connection.</p>
 
         <div class="notice-box">
-          <strong>Early registration</strong>
-          <p>Secure your seat and help the organizing team plan the day around attendees, sessions, and participation needs.</p>
+          <strong data-i18n="registration_notice_title">Early registration</strong>
+          <p data-i18n="registration_notice_text">Secure your seat and help the organizing team plan the day around attendees, sessions, and participation needs.</p>
         </div>
       </div>
 
       <form class="registration-form" id="registration-form" novalidate>
         <div class="form-row">
-          <label for="full_name">Full Name</label>
-          <input type="text" id="full_name" name="full_name" placeholder="e.g. Amina Hassan" required>
+          <label for="full_name" data-i18n="form_full_name">Full Name</label>
+          <input type="text" id="full_name" name="full_name" data-i18n-placeholder="form_full_name_placeholder" placeholder="e.g. Amina Hassan" required>
           <span class="field-error" data-error-for="full_name"></span>
         </div>
 
         <div class="form-row">
-          <label for="profession">Profession</label>
+          <label for="profession" data-i18n="form_profession">Profession</label>
           <select id="profession" name="profession" required>
-            <option value="" disabled selected>Select your profession</option>
-            <option value="Pharmacist">Pharmacist</option>
-            <option value="Pharmacy Student">Pharmacy Student</option>
-            <option value="Healthcare Professional">Healthcare Professional</option>
-            <option value="Organization Representative">Organization Representative</option>
-            <option value="Guest">Guest</option>
-            <option value="Other">Other</option>
+            <option value="" disabled selected data-i18n="form_profession_placeholder">Select your profession</option>
+            <option value="Pharmacist" data-i18n="profession_pharmacist">Pharmacist</option>
+            <option value="Pharmacy Student" data-i18n="profession_student">Pharmacy Student</option>
+            <option value="Healthcare Professional" data-i18n="profession_healthcare">Healthcare Professional</option>
+            <option value="Organization Representative" data-i18n="profession_org">Organization Representative</option>
+            <option value="Guest" data-i18n="profession_guest">Guest</option>
+            <option value="Other" data-i18n="profession_other">Other</option>
           </select>
           <span class="field-error" data-error-for="profession"></span>
         </div>
 
         <div class="form-row form-row-split">
           <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            <label for="email" data-i18n="form_email">Email</label>
+            <input type="email" id="email" name="email" data-i18n-placeholder="form_email_placeholder" placeholder="name@example.com" required>
             <span class="field-error" data-error-for="email"></span>
           </div>
           <div>
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="+249 ..." required>
+            <label for="phone" data-i18n="form_phone">Phone</label>
+            <input type="tel" id="phone" name="phone" data-i18n-placeholder="form_phone_placeholder" placeholder="+249 ..." required>
             <span class="field-error" data-error-for="phone"></span>
           </div>
         </div>
 
         <div class="form-row">
-          <label for="organization">Organization / Institution</label>
-          <input type="text" id="organization" name="organization" placeholder="e.g. Sudanese Pharmacists Association">
+          <label for="organization" data-i18n="form_organization">Organization / Institution</label>
+          <input type="text" id="organization" name="organization" data-i18n-placeholder="form_organization_placeholder" placeholder="e.g. Sudanese Pharmacists Association">
           <span class="field-error" data-error-for="organization"></span>
         </div>
 
         <fieldset class="form-row">
-          <legend>Attendance Type</legend>
+          <legend data-i18n="form_attendance_type">Attendance Type</legend>
           <div class="radio-group">
             <label class="radio-option">
               <input type="radio" name="attendance_type" value="Physical" required>
-              <span>Physical</span>
+              <span data-i18n="attendance_physical">Physical</span>
             </label>
             <label class="radio-option">
               <input type="radio" name="attendance_type" value="Online">
-              <span>Online</span>
+              <span data-i18n="attendance_online">Online</span>
             </label>
           </div>
           <span class="field-error" data-error-for="attendance_type"></span>
@@ -264,66 +263,77 @@
         <div class="form-row form-row-consent">
           <label class="checkbox-option">
             <input type="checkbox" id="consent" name="consent" required>
-            <span>I agree that the information provided may be used for event registration and attendance management.</span>
+            <span data-i18n="consent_text">I agree that the information provided may be used for event registration and attendance management.</span>
           </label>
           <span class="field-error" data-error-for="consent"></span>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-full">Submit Registration</button>
-        <p class="form-footnote">Your details are sent directly to the event database.</p>
+        <button type="submit" class="btn btn-primary btn-full" data-i18n="form_submit">Submit Registration</button>
+        <p class="form-footnote" data-i18n="form_footer_text">Your details are sent directly to the event database.</p>
       </form>
     </div>
   </section>
 
-  <!-- ============ QUESTIONS / INTERACTION ============ -->
   <section class="questions" id="questions">
     <div class="section-inner questions-grid">
       <div>
-        <p class="eyebrow">Interaction</p>
-        <h2>Ask a Question</h2>
-        <p class="lead">Share your question for the speakers and moderators so the conversations stay relevant, thoughtful, and engaging.</p>
+        <p class="eyebrow" data-i18n="questions_eyebrow">Interaction</p>
+        <h2 data-i18n="questions_title">Ask a Question</h2>
+        <p class="lead" data-i18n="questions_text">Share your question for the speakers and moderators so the conversations stay relevant, thoughtful, and engaging.</p>
       </div>
 
       <form class="question-form" id="question-form">
         <div class="form-row">
-          <label for="q_name">Name</label>
-          <input type="text" id="q_name" name="name" placeholder="Your name">
+          <label for="q_name" data-i18n="question_name">Name</label>
+          <input type="text" id="q_name" name="name" data-i18n-placeholder="question_name_placeholder" placeholder="Your name">
         </div>
         <div class="form-row">
-          <label for="q_session">Session</label>
+          <label for="q_session" data-i18n="question_session">Session</label>
           <select id="q_session" name="session">
-            <option value="" disabled selected>Select a session</option>
-            <option value="24 September — Registration & Welcome">24 September &mdash; Registration &amp; Welcome</option>
-            <option value="24 September — Keynote Session">24 September &mdash; Keynote Session</option>
-            <option value="24 September — Professional Panel">24 September &mdash; Professional Panel</option>
+            <option value="" disabled selected data-i18n="question_session_placeholder">Select a session</option>
+            <option value="24 September — Registration & Welcome" data-i18n="question_session_1">24 September — Registration & Welcome</option>
+            <option value="24 September — Keynote Session" data-i18n="question_session_2">24 September — Keynote Session</option>
+            <option value="24 September — Professional Panel" data-i18n="question_session_3">24 September — Professional Panel</option>
           </select>
         </div>
         <div class="form-row">
-          <label for="q_question">Question</label>
-          <textarea id="q_question" name="question" rows="3" placeholder="Write your question" required></textarea>
+          <label for="q_question" data-i18n="question_question">Question</label>
+          <textarea id="q_question" name="question" rows="3" data-i18n-placeholder="question_question_placeholder" placeholder="Write your question" required></textarea>
         </div>
         <label class="checkbox-option checkbox-inline">
           <input type="checkbox" id="q_anonymous" name="anonymous">
-          <span>Submit anonymously</span>
+          <span data-i18n="question_anonymous">Submit anonymously</span>
         </label>
-        <button type="submit" class="btn btn-outline-light btn-full">Submit Question</button>
+        <button type="submit" class="btn btn-outline-light btn-full" data-i18n="question_submit">Submit Question</button>
       </form>
     </div>
   </section>
 
-  <!-- ============ ONLINE PARTICIPATION ============ -->
   <section class="online" id="online">
     <div class="section-inner">
-      <p class="eyebrow">Proposed Hybrid Model</p>
-      <h2>Physical + Online Participation</h2>
-      <p class="lead">The proposed system allows selected sessions, speakers or participants to take part remotely while the main event continues physically at the venue.</p>
+      <p class="eyebrow" data-i18n="media_eyebrow">After the Event</p>
+      <h2 data-i18n="media_title">Photos &amp; Videos</h2>
+      <p class="lead" data-i18n="media_text">Event photos and videos will be uploaded here after Pharmacists&rsquo; Day 2026.</p>
 
-      <div class="online-flow">
-        <div class="online-flow-item">Event Program</div>
-        <div class="online-flow-item">Online Session</div>
-        <div class="online-flow-item online-flow-item-muted">Meeting Link<br><span>Online link will be published</span></div>
-        <div class="online-flow-item">Moderator</div>
-        <div class="online-flow-item">Questions</div>
+      <div class="media-grid">
+        <div class="media-placeholder">
+          <span class="media-icon" aria-hidden="true">&#9634;</span>
+          <h3 data-i18n="media_photos_title">Event Photos</h3>
+          <p data-i18n="media_photos_text">A collection of moments from the event will appear here.</p>
+          <span class="media-status" data-i18n="media_status">Available after the event</span>
+        </div>
+        <div class="media-placeholder">
+          <span class="media-icon" aria-hidden="true">&#9654;</span>
+          <h3 data-i18n="media_videos_title">Event Videos</h3>
+          <p data-i18n="media_videos_text">Talks, highlights, and selected recordings will be added here.</p>
+          <span class="media-status" data-i18n="media_status_2">Available after the event</span>
+        </div>
+        <div class="media-placeholder media-placeholder-featured">
+          <span class="media-icon" aria-hidden="true">&#10022;</span>
+          <h3 data-i18n="media_highlights_title">Event Highlights</h3>
+          <p data-i18n="media_highlights_text">Follow this space for memorable moments and event updates.</p>
+          <span class="media-status" data-i18n="media_status_3">Coming after 24 September</span>
+        </div>
       </div>
     </div>
   </section>
@@ -336,16 +346,16 @@
     <div class="footer-brand">
       <img src="logo.jpeg" alt="Pharmacists' Day 2026 organizing body logo" class="footer-logo">
       <p class="footer-title">Pharmacists&rsquo; Day 2026</p>
-      <p class="footer-date">24&ndash; September 2026</p>
+      <p class="footer-date" data-i18n="footer_date">24&ndash; September 2026</p>
     </div>
     <div class="footer-tags">
-      <span>Physical + Online</span>
-      <span>Digital Registration</span>
-      <span>QR Attendance</span>
+      <span data-i18n="footer_tag_1">Physical + Online</span>
+      <span data-i18n="footer_tag_2">Digital Registration</span>
+      <span data-i18n="footer_tag_3">QR Attendance</span>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>Pharmacists&rsquo; Day 2026 &middot; A day of learning, leadership, and community.</p>
+    <p data-i18n="footer_bottom">Pharmacists&rsquo; Day 2026 &middot; A day of learning, leadership, and community.</p>
   </div>
 </footer>
 

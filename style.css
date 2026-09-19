@@ -212,6 +212,19 @@ a { color: inherit; }
 
 .header-actions { display: flex; align-items: center; gap: 0.75rem; }
 
+.lang-toggle {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.55rem 0.8rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -721,37 +734,33 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
 .question-form .checkbox-option { color: rgba(255,255,255,0.85); }
 
 /* ==========================================================================
-   Online participation
+   Post-event media
    ========================================================================== */
-.online-flow {
+.media-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 2.5rem;
 }
-.online-flow-item {
+.media-placeholder {
   flex: 1;
-  min-width: 140px;
+  min-width: 220px;
   background: var(--paper-raised);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 1.25rem;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  font-weight: 600;
-  font-size: 0.92rem;
   position: relative;
 }
-.online-flow-item:not(:last-child)::after {
-  content: "→";
-  position: absolute;
-  right: -1.35rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--ink-soft);
-  font-weight: 400;
-}
-.online-flow-item-muted { background: var(--gold-tint); border-color: var(--gold); color: var(--gold); }
-.online-flow-item-muted span { display: block; font-size: 0.72rem; font-weight: 400; margin-top: 0.3rem; }
+.media-placeholder-featured { background: var(--gold-tint); border-color: var(--gold); }
+.media-icon { color: var(--gold); font-size: 1.6rem; line-height: 1; margin-bottom: 0.8rem; }
+.media-placeholder h3 { margin: 0 0 0.4rem; font-size: 1.1rem; }
+.media-placeholder p { margin: 0 auto 1rem; max-width: 26ch; color: var(--ink-soft); font-size: 0.9rem; }
+.media-status { color: var(--green-700); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
 
 /* ==========================================================================
    Post-event
@@ -905,8 +914,7 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
   .workflow-steps { flex-direction: column; }
   .workflow-connector { width: 1px; height: 1.75rem; }
 
-  .online-flow { flex-direction: column; }
-  .online-flow-item:not(:last-child)::after { content: "↓"; right: 50%; top: 100%; transform: translate(50%, 0.4rem); }
+  .media-grid { flex-direction: column; }
 
   .program-head { flex-direction: column; }
 
@@ -932,7 +940,7 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
 
 .about,
 .speakers,
-.online-flow,
+.media-grid,
 .post-grid {
   position: relative;
 }
@@ -1333,33 +1341,16 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
   border-radius: 10px;
 }
 
-/* Online flow: cards become nodes in a visual system */
-.online-flow-item {
+/* Media cards use the same soft geometry as the rest of the page. */
+.media-placeholder {
   border-radius: var(--shape-radius);
   box-shadow: 0 9px 24px rgba(14,59,42,0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.online-flow-item:hover {
+.media-placeholder:hover {
   transform: translateY(-4px);
   box-shadow: var(--shape-shadow);
-}
-
-.online-flow-item:not(:last-child)::after {
-  width: 1.8rem;
-  height: 1.8rem;
-  right: -1.9rem;
-  top: 50%;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  color: var(--green-700);
-}
-
-.online-flow-item-muted {
-  border-radius: var(--shape-radius);
 }
 
 /* Certificate preview: physical document silhouette */
@@ -1429,7 +1420,7 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
     border-radius: 18px;
   }
 
-  .online-flow-item:not(:last-child)::after {
+  .media-placeholder:not(:last-child)::after { 
     right: 50%;
     top: calc(100% + 0.25rem);
     transform: translateX(50%) rotate(90deg);
