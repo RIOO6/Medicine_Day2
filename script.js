@@ -1,10 +1,3 @@
-/* ==========================================================================
-   Pharmacists' Day 2026 — Digital Event Portal (Prototype)
-   script.js
-   ==========================================================================
-   Everything here is written to be easy to swap for real backend calls
-   later. Search for "SUPABASE" comments to find the exact spots to wire up.
-   ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
@@ -15,9 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initJoinOnlineButton();
 });
 
-/* ==========================================================================
-   Toast notifications
-   ========================================================================== */
 function showToast({ title, message, variant = "success", duration = 5000 }) {
   const container = document.getElementById("toast-container");
   if (!container) return;
@@ -51,6 +41,36 @@ function escapeHtml(str) {
 /* ==========================================================================
    Mobile navigation
    ========================================================================== */
+function showToast({ title, message, variant = "success", duration = 5000 }) {
+  const container = document.getElementById("toast-container");
+  if (!container) return;
+
+  const toast = document.createElement("div");
+  toast.className = "toast" + (variant === "error" ? " toast-error" : "");
+  toast.setAttribute("role", "status");
+
+  toast.innerHTML = `
+    <div class="toast-body">
+      <strong>${escapeHtml(title)}</strong>
+      <p>${escapeHtml(message)}</p>
+    </div>
+    <button class="toast-close" aria-label="Dismiss notification">&times;</button>
+  `;
+
+  toast.querySelector(".toast-close").addEventListener("click", () => toast.remove());
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    if (toast.isConnected) toast.remove();
+  }, duration);
+}
+
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
+}
+
 function initMobileMenu() {
   const header = document.querySelector(".site-header");
   const toggle = document.getElementById("menu-toggle");
@@ -78,16 +98,13 @@ function initSmoothNavClose() {
   });
 }
 
-/* ==========================================================================
-   Program schedule
-   ========================================================================== */
 const PROGRAM_DATA = {
   1: {
     label: "24 September — Event Day",
     sessions: [
-      { time: "09:00", title: "Registration & Welcome", tag: "Preliminary" },
-      { time: "09:30", title: "Keynote Session", tag: "Preliminary — speaker to be confirmed" },
-      { time: "11:00", title: "Professional Panel", tag: "Preliminary — panelists to be confirmed" },
+      { time: "09:00", title: "Registration & Welcome", tag: "Opening session" },
+      { time: "09:30", title: "Keynote Session", tag: "Featured address" },
+      { time: "11:00", title: "Professional Panel", tag: "Expert discussion" },
     ],
   },
 };
@@ -135,9 +152,6 @@ function initProgramTabs() {
   renderProgramDay("1");
 }
 
-/* ==========================================================================
-   "Join Online" quick action — no fake meeting link
-   ========================================================================== */
 function initJoinOnlineButton() {
   const btn = document.getElementById("join-online-btn");
   if (!btn) return;
