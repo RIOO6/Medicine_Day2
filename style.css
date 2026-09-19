@@ -52,6 +52,7 @@ body {
   color: var(--ink);
   background: var(--paper);
   line-height: 1.6;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -214,15 +215,33 @@ a { color: inherit; }
 
 .lang-toggle {
   appearance: none;
-  border: 1px solid var(--line);
-  background: #fff;
-  color: var(--ink);
+  border: 2px solid var(--green-700);
+  background: var(--green-100);
+  color: var(--green-800);
   border-radius: 999px;
-  padding: 0.55rem 0.8rem;
+  min-height: 40px;
+  min-width: 142px;
+  padding: 0.55rem 0.95rem;
   font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  font-size: 0.86rem;
+  letter-spacing: 0;
   cursor: pointer;
+  box-shadow: 0 5px 14px rgba(29, 109, 79, 0.12);
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.lang-toggle::before {
+  content: "文";
+  display: inline-block;
+  margin-right: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
+  background: var(--green-700);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 .menu-toggle {
@@ -887,6 +906,19 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
 }
 
 @media (max-width: 720px) {
+  .header-inner {
+    gap: 0.55rem;
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .brand { flex: 1 1 auto; min-width: 0; }
+  .brand-title { font-size: 0.9rem; }
+  .brand-subtitle { display: none; }
+  .header-actions { gap: 0.45rem; }
+  .lang-toggle { min-width: 142px; min-height: 44px; padding: 0.55rem 0.7rem; }
+  .header-actions .btn-primary { display: none; }
+
   .main-nav { display: none; }
   .menu-toggle { display: flex; }
 

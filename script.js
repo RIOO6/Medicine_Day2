@@ -330,7 +330,7 @@ function setLanguage(lang) {
 
   const langToggle = document.getElementById("lang-toggle");
   if (langToggle) {
-    langToggle.textContent = appState.lang === "ar" ? "EN" : "AR";
+    langToggle.querySelector(".lang-toggle-label").textContent = appState.lang === "ar" ? "اللغة: English" : "Language: العربية";
     langToggle.setAttribute("aria-label", appState.lang === "ar" ? "Switch to English" : "تبديل اللغة إلى العربية");
   }
 
