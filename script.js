@@ -79,23 +79,15 @@ function initSmoothNavClose() {
 }
 
 /* ==========================================================================
-   Program tabs (Day 1 / Day 2)
+   Program schedule
    ========================================================================== */
 const PROGRAM_DATA = {
   1: {
-    label: "24 September — Day 01",
+    label: "24 September — Event Day",
     sessions: [
       { time: "09:00", title: "Registration & Welcome", tag: "Preliminary" },
       { time: "09:30", title: "Keynote Session", tag: "Preliminary — speaker to be confirmed" },
       { time: "11:00", title: "Professional Panel", tag: "Preliminary — panelists to be confirmed" },
-    ],
-  },
-  2: {
-    label: "25 September — Day 02",
-    sessions: [
-      { time: "09:00", title: "Scientific Session", tag: "Preliminary — speaker to be confirmed" },
-      { time: "10:30", title: "Workshop", tag: "Preliminary — facilitator to be confirmed" },
-      { time: "12:00", title: "Closing Ceremony", tag: "Preliminary" },
     ],
   },
 };
