@@ -1,71 +1,242 @@
 
 const appState = {
-  lang: "en",
+  lang: "ar",
 };
 
+/* ==========================================================================
+   UI copy — bilingual dictionary (ar is the primary/default language)
+   ========================================================================== */
 const translations = {
+  ar: {
+    event_title: "اليوم العالمي للصيدلة 2026",
+    brand_subtitle: "تمكين الصيدلي لمستقبل أكثر صحة",
+    nav_home: "الرئيسية",
+    nav_about: "عن الفعالية",
+    nav_program: "البرنامج",
+    nav_speakers: "المتحدثون",
+    nav_donors: "الداعمون",
+    nav_register: "التسجيل",
+    cta_register: "تسجيل",
+    hero_kicker: "وزارة الصحة الاتحادية — الإدارة العامة للصيدلة",
+    hero_slogan: "تمكين الصيدلي لمستقبل أكثر صحة",
+    hero_date: "الجمعة، 25 سبتمبر 2026",
+    hero_text: "يوم وطني يجمع الصيادلة وطلاب الصيدلة وقادة الرعاية الصحية والشركاء في جلسات علمية، تكريم، ومبادرات مجتمعية.",
+    hero_register: "سجّل حضورك",
+    hero_program: "استعرض البرنامج",
+    fact_september: "سبتمبر 2026",
+    fact_phases_label: "3",
+    fact_phases_text: "مراحل رئيسية",
+    fact_digital_label: "رقمي",
+    fact_digital_text: "تسجيل وتفاعل",
+    qa_register_title: "التسجيل",
+    qa_register_text: "احجز مكانك واختر طريقة حضورك.",
+    qa_register_link: "اذهب إلى التسجيل ←",
+    qa_program_title: "البرنامج",
+    qa_program_text: "اطّلع على مراحل اليوم والجلسات والمتحدثين.",
+    qa_program_link: "عرض البرنامج ←",
+    qa_donors_title: "الداعمون",
+    qa_donors_text: "تعرّف على الجهات الداعمة للفعالية.",
+    qa_donors_link: "عرض الداعمين ←",
+    about_eyebrow: "عن الفعالية",
+    about_title: "يوم واحد، تجربة رقمية متكاملة.",
+    about_text: "تسجيل واحد يكفي: يستلم المشاركون معرّفاً رقمياً، ويحصل فريق التنظيم على بيانات منظمة، ويملك الحضور الحضوري والإلكتروني قناة واضحة للمشاركة والتفاعل طوال اليوم.",
+    feature_registration_title: "التسجيل",
+    feature_registration_text: "استمارة رقمية واحدة لتسجيل جميع بيانات المشاركين.",
+    feature_registration_badge: "متاح الآن",
+    feature_attendance_title: "الحضور",
+    feature_attendance_text: "معرّف مشارك خاص بكل تسجيل لتسهيل إدارة اليوم.",
+    feature_attendance_badge: "جاهز",
+    feature_interaction_title: "التفاعل",
+    feature_interaction_text: "يمكن للحضور الحضوري والإلكتروني إرسال أسئلتهم للمشرفين مباشرة.",
+    feature_interaction_badge: "جاهز",
+    feature_record_title: "سجل الفعالية",
+    feature_record_text: "البرنامج، المتحدثون، وتحديثات اليوم في مكان واحد.",
+    feature_record_badge: "محدّث باستمرار",
+    speakers_eyebrow: "المتحدثون",
+    speakers_title: "المتحدثون والمساهمون",
+    speakers_text: "نخبة من القيادات الصحية والأكاديمية تتحدث في الجلسة الافتتاحية والجلسة العلمية ليوم 25 سبتمبر.",
+    speaker_name_1: "بروفيسور هيثم محمد إبراهيم",
+    speaker_role_1: "وزير الصحة الاتحادي",
+    speaker_badge_1: "الكلمة الرئيسية",
+    speaker_name_2: "د. علي بابكر سيد أحمد",
+    speaker_role_2: "وكيل وزارة الصحة الاتحادية",
+    speaker_badge_2: "الجلسة الافتتاحية",
+    speaker_name_3: "د. محمد مروان",
+    speaker_role_3: "رئيس اللجنة المنظمة",
+    speaker_badge_3: "الجلسة الافتتاحية",
+    speaker_name_4: "د. نجم الدين أحمد المجذوب",
+    speaker_role_4: "مدير الإدارة العامة للصيدلة",
+    speaker_badge_4: "الممارسة الصيدلانية ومسار الصيدلي",
+    speaker_name_5: "د. خالد صابر",
+    speaker_role_5: "الجلسة العلمية",
+    speaker_badge_5: "التخصصات الصيدلانية: التحديات والفرص",
+    speaker_name_6: "بروفيسور عاصم يوسف",
+    speaker_role_6: "الجلسة العلمية",
+    speaker_badge_6: "التصنيع الدوائي والخارطة الاستثمارية",
+    speaker_name_7: "د. جمال خلف الله",
+    speaker_role_7: "الجلسة العلمية",
+    speaker_badge_7: "الصيدلة والتحول الرقمي",
+    speaker_name_8: "د. هالة موسى",
+    speaker_role_8: "الفترة المسائية",
+    speaker_badge_8: "المبادرات المجتمعية",
+    print_header_title: "اليوم العالمي للصيدلة 2026",
+    print_header_subtitle: "وزارة الصحة الاتحادية — الإدارة العامة للصيدلة · الجمعة 25 سبتمبر 2026",
+    program_eyebrow: "برنامج اليوم",
+    program_title: "البرنامج الكامل — الجمعة 25 سبتمبر 2026",
+    program_download: "تحميل البرنامج (PDF)",
+    program_download_note: "تُفتح نافذة الطباعة — اختر «حفظ كملف PDF»",
+    registration_eyebrow: "التسجيل",
+    registration_title: "احجز مكانك",
+    registration_text: "انضم إلى الصيادلة والطلاب والمهنيين في الرعاية الصحية والشركاء ليوم مركّز من التعليم والحوار والتواصل المهني.",
+    registration_notice_title: "التسجيل المبكر",
+    registration_notice_text: "احجز مقعدك وساعد فريق التنظيم على التخطيط لليوم حسب عدد الحضور والجلسات ومتطلبات المشاركة.",
+    form_full_name: "الاسم الكامل",
+    form_full_name_placeholder: "مثال: أمينة حسن",
+    form_profession: "المهنة",
+    form_profession_placeholder: "اختر مهنتك",
+    profession_pharmacist: "صيدلي",
+    profession_student: "طالب صيدلة",
+    profession_healthcare: "مهني في الرعاية الصحية",
+    profession_org: "ممثل جهة",
+    profession_guest: "ضيف",
+    profession_other: "أخرى",
+    form_email: "البريد الإلكتروني",
+    form_email_placeholder: "name@example.com",
+    form_phone: "الهاتف",
+    form_phone_placeholder: "+249 ...",
+    form_organization: "الجهة / المؤسسة",
+    form_organization_placeholder: "مثال: جمعية الصيادلة السودانية",
+    form_attendance_type: "نوع الحضور",
+    attendance_physical: "حضوري",
+    attendance_online: "أونلاين",
+    consent_text: "أوافق على استخدام المعلومات المسجلة لأغراض التسجيل في الفعالية وإدارة الحضور.",
+    form_submit: "إرسال التسجيل",
+    form_footer_text: "يتم إرسال تفاصيلك مباشرة إلى قاعدة بيانات الفعالية.",
+    questions_eyebrow: "التفاعل",
+    questions_title: "اطرح سؤالاً",
+    questions_text: "شارك سؤالك للمتحدثين والمشرفين حتى تبقى المناقشات ذات صلة وملهمة.",
+    question_name: "الاسم",
+    question_name_placeholder: "اسمك",
+    question_session: "المرحلة",
+    question_session_placeholder: "اختر مرحلة",
+    question_session_1: "25 سبتمبر — الافتتاح والبروتوكول",
+    question_session_2: "25 سبتمبر — الجلسة العلمية والاستثمار",
+    question_session_3: "25 سبتمبر — المبادرات المجتمعية والتكريم",
+    question_question: "السؤال",
+    question_question_placeholder: "اكتب سؤالك",
+    question_anonymous: "إرسال مجهول",
+    question_submit: "إرسال السؤال",
+    donors_eyebrow: "شكر وتقدير",
+    donors_title: "شكراً لداعمينا وشركائنا",
+    donors_text: "نتوجه بالشكر والتقدير للجهات التي ساهمت في إنجاح اليوم العالمي للصيدلة 2026.",
+    donor_hero_name: "وزارة الصحة الاتحادية",
+    donor_hero_role: "الإدارة العامة للصيدلة",
+    donor_hero_quote: "\u0022نشكر كل داعم ساهم في جعل اليوم العالمي للصيدلة 2026 فعالية تليق بمهنة الصيدلة ورسالتها.\u0022",
+    donor_hero_note: "استبدل الصورة أعلاه بصورة رئيس الجهة",
+    footer_date: "الجمعة 25 سبتمبر 2026",
+    footer_tag_1: "حضوري + أونلاين",
+    footer_tag_2: "تسجيل رقمي",
+    footer_tag_3: "3 مراحل",
+    footer_bottom: "اليوم العالمي للصيدلة 2026 · وزارة الصحة الاتحادية — الإدارة العامة للصيدلة.",
+    form_full_name_required: "يرجى إدخال الاسم الكامل.",
+    form_profession_required: "يرجى اختيار المهنة.",
+    form_email_required: "يرجى إدخال البريد الإلكتروني.",
+    form_email_invalid: "يرجى إدخال بريد إلكتروني صحيح.",
+    form_phone_required: "يرجى إدخال رقم الهاتف.",
+    form_phone_invalid: "يرجى إدخال رقم هاتف صحيح.",
+    form_attendance_required: "يرجى اختيار طريقة الحضور.",
+    form_consent_required: "يجب الموافقة على الشروط للتسجيل.",
+    form_check_title: "راجع النموذج",
+    form_check_message: "بعض الحقول المطلوبة تحتاج إلى مراجعة قبل الإرسال.",
+    form_success_title: "نجح التسجيل",
+    form_success_message: "معرف المشارك: {code}. تم تسجيل تأكيد التسجيل.",
+    form_fail_title: "تعذّر إرسال التسجيل",
+    form_fail_message: "يرجى التحقق من الاتصال، أو المحاولة لاحقاً.",
+    question_add_title: "أضف سؤالك",
+    question_add_message: "يرجى كتابة سؤال قبل الإرسال.",
+    question_success_title: "تم إرسال السؤال",
+    question_success_message: "تم إرسال سؤالك إلى قائمة المراجعة.",
+    question_fail_title: "تعذّر إرسال السؤال",
+    question_fail_message: "يرجى التحقق من الاتصال، أو المحاولة لاحقاً.",
+  },
   en: {
-    brand_subtitle: "Digital Event Portal",
+    event_title: "World Pharmacists' Day 2026",
+    brand_subtitle: "Empowering the Pharmacist for a Healthier Future",
     nav_home: "Home",
     nav_about: "About",
     nav_program: "Program",
     nav_speakers: "Speakers",
+    nav_donors: "Supporters",
     nav_register: "Registration",
     cta_register: "Register",
-    hero_kicker: "Annual event for pharmacists and healthcare leaders",
-    hero_date: "24 September 2026",
-    hero_text: "A memorable day of professional exchange, scientific insight, networking, and collaboration for the pharmacy and healthcare community.",
+    hero_kicker: "Federal Ministry of Health — General Directorate of Pharmacy",
+    hero_slogan: "Empowering the Pharmacist for a Healthier Future",
+    hero_date: "Friday, 25 September 2026",
+    hero_text: "A national day bringing together pharmacists, pharmacy students, healthcare leaders and partners for scientific sessions, recognition, and community initiatives.",
     hero_register: "Register to Attend",
     hero_program: "Explore Program",
-    fact_september: "September",
-    fact_hybrid_label: "Hybrid",
-    fact_hybrid_text: "Physical + Online",
-    fact_hybrid_note: "(proposed)",
+    fact_september: "September 2026",
+    fact_phases_label: "3",
+    fact_phases_text: "Main Phases",
     fact_digital_label: "Digital",
-    fact_digital_text: "Participation",
+    fact_digital_text: "Registration & Interaction",
     qa_register_title: "Register",
     qa_register_text: "Reserve your place and choose how you will attend.",
     qa_register_link: "Go to registration →",
     qa_program_title: "Program",
-    qa_program_text: "View sessions, speakers and the event schedule.",
+    qa_program_text: "See the day's phases, sessions, and speakers.",
     qa_program_link: "View program →",
-    qa_media_title: "Event Media",
-    qa_media_text: "Photos and videos from the event will be shared here after the day.",
-    qa_media_link: "See media updates →",
-    about_eyebrow: "The Digital Concept",
-    about_title: "One event, one digital experience.",
-    about_text: "The proposed digital system acts as a simple digital layer around the physical event. Participants register once, organizers receive structured information, and both physical and online audiences have a clear way to participate.",
+    qa_donors_title: "Supporters",
+    qa_donors_text: "Meet the organizations supporting the event.",
+    qa_donors_link: "View supporters →",
+    about_eyebrow: "About the Event",
+    about_title: "One day, one digital experience.",
+    about_text: "One registration is enough: participants receive a digital ID, the organizing team gets structured data, and both in-person and online audiences have a clear channel to participate and interact throughout the day.",
     feature_registration_title: "Registration",
-    feature_registration_text: "Collect participant information through a structured digital form.",
-    feature_registration_badge: "Database Ready",
+    feature_registration_text: "A single digital form captures every participant's details.",
+    feature_registration_badge: "Live Now",
     feature_attendance_title: "Attendance",
-    feature_attendance_text: "Use participant IDs and QR check-in to reduce manual attendance work.",
-    feature_attendance_badge: "QR Ready",
+    feature_attendance_text: "Each registration gets a unique participant ID to keep the day running smoothly.",
+    feature_attendance_badge: "Ready",
     feature_interaction_title: "Interaction",
-    feature_interaction_text: "Allow physical and online participants to submit questions to moderators.",
-    feature_interaction_badge: "Interaction Ready",
+    feature_interaction_text: "In-person and online attendees can send questions to moderators directly.",
+    feature_interaction_badge: "Ready",
     feature_record_title: "Event Record",
-    feature_record_text: "Keep feedback, resources and event information organized digitally.",
-    feature_record_badge: "Expandable",
-    program_eyebrow: "Preliminary Program",
-    program_title: "Program at a glance",
-    program_stamp: "Draft — Subject to Confirmation",
-    program_tab_label: "24 September — Event Day",
-    speakers_eyebrow: "Preliminary",
+    feature_record_text: "Program, speakers, and day-of updates, all in one place.",
+    feature_record_badge: "Continuously Updated",
+    speakers_eyebrow: "Speakers",
     speakers_title: "Speakers & Contributors",
-    speakers_text: "A distinguished line-up of professionals, educators, and leaders shaping the future of pharmacy practice and healthcare excellence.",
-    speaker_name_1: "Speaker Name",
-    speaker_role_1: "Professional Title / Organization",
-    speaker_badge: "To Be Confirmed",
-    speaker_name_2: "Speaker Name",
-    speaker_role_2: "Professional Title / Organization",
-    speaker_badge_2: "To Be Confirmed",
-    speaker_name_3: "Speaker Name",
-    speaker_role_3: "Professional Title / Organization",
-    speaker_badge_3: "To Be Confirmed",
-    speaker_name_4: "Speaker Name",
-    speaker_role_4: "Professional Title / Organization",
-    speaker_badge_4: "To Be Confirmed",
+    speakers_text: "Distinguished health and academic leaders speaking in the opening and scientific sessions on 25 September.",
+    speaker_name_1: "Prof. Haitham Mohamed Ibrahim",
+    speaker_role_1: "Federal Minister of Health",
+    speaker_badge_1: "Keynote Address",
+    speaker_name_2: "Dr. Ali Babiker Sid Ahmed",
+    speaker_role_2: "Undersecretary, Federal Ministry of Health",
+    speaker_badge_2: "Opening Session",
+    speaker_name_3: "Dr. Mohamed Marwan",
+    speaker_role_3: "Organizing Committee Chair",
+    speaker_badge_3: "Opening Session",
+    speaker_name_4: "Dr. Najm Aldeen Ahmed Elmagzoub",
+    speaker_role_4: "Director General of Pharmacy",
+    speaker_badge_4: "Pharmacy Practice & the Pharmacist's Career Path",
+    speaker_name_5: "Dr. Khalid Saber",
+    speaker_role_5: "Scientific Session",
+    speaker_badge_5: "Pharmaceutical Specialties: Challenges & Opportunities",
+    speaker_name_6: "Prof. Asim Yousif",
+    speaker_role_6: "Scientific Session",
+    speaker_badge_6: "Pharmaceutical Manufacturing & Investment Roadmap",
+    speaker_name_7: "Dr. Jamal Khalafalla",
+    speaker_role_7: "Scientific Session",
+    speaker_badge_7: "Pharmacy & Digital Transformation",
+    speaker_name_8: "Dr. Hala Musa",
+    speaker_role_8: "Afternoon Phase",
+    speaker_badge_8: "Community Initiatives",
+    print_header_title: "World Pharmacists' Day 2026",
+    print_header_subtitle: "Federal Ministry of Health — General Directorate of Pharmacy · Friday 25 September 2026",
+    program_eyebrow: "Day Program",
+    program_title: "Full Program — Friday 25 September 2026",
+    program_download: "Download Schedule (PDF)",
+    program_download_note: "Opens the print dialog — choose “Save as PDF”",
     registration_eyebrow: "Registration",
     registration_title: "Reserve your place",
     registration_text: "Join pharmacists, students, healthcare professionals, and partners for a focused day of learning, dialogue, and professional connection.",
@@ -98,32 +269,27 @@ const translations = {
     questions_text: "Share your question for the speakers and moderators so the conversations stay relevant, thoughtful, and engaging.",
     question_name: "Name",
     question_name_placeholder: "Your name",
-    question_session: "Session",
-    question_session_placeholder: "Select a session",
-    question_session_1: "24 September — Registration & Welcome",
-    question_session_2: "24 September — Keynote Session",
-    question_session_3: "24 September — Professional Panel",
+    question_session: "Phase",
+    question_session_placeholder: "Select a phase",
+    question_session_1: "25 September — Opening & Protocol",
+    question_session_2: "25 September — Scientific Session & Investment",
+    question_session_3: "25 September — Community Initiatives & Recognition",
     question_question: "Question",
     question_question_placeholder: "Write your question",
     question_anonymous: "Submit anonymously",
     question_submit: "Submit Question",
-    media_eyebrow: "After the Event",
-    media_title: "Photos & Videos",
-    media_text: "Event photos and videos will be uploaded here after Pharmacists’ Day 2026.",
-    media_photos_title: "Event Photos",
-    media_photos_text: "A collection of moments from the event will appear here.",
-    media_videos_title: "Event Videos",
-    media_videos_text: "Talks, highlights, and selected recordings will be added here.",
-    media_highlights_title: "Event Highlights",
-    media_highlights_text: "Follow this space for memorable moments and event updates.",
-    media_status: "Available after the event",
-    media_status_2: "Available after the event",
-    media_status_3: "Coming after 24 September",
-    footer_date: "24– September 2026",
+    donors_eyebrow: "Acknowledgment",
+    donors_title: "Thank You to Our Supporters",
+    donors_text: "With sincere thanks to the organizations that helped make World Pharmacists' Day 2026 possible.",
+    donor_hero_name: "Federal Ministry of Health",
+    donor_hero_role: "General Directorate of Pharmacy",
+    donor_hero_quote: "\u0022We thank every supporter who helped make World Pharmacists' Day 2026 an event worthy of the pharmacy profession and its mission.\u0022",
+    donor_hero_note: "Replace the photo above with a photo of the organizing body's head",
+    footer_date: "Friday 25 September 2026",
     footer_tag_1: "Physical + Online",
     footer_tag_2: "Digital Registration",
-    footer_tag_3: "QR Attendance",
-    footer_bottom: "Pharmacists’ Day 2026 · A day of learning, leadership, and community.",
+    footer_tag_3: "3 Phases",
+    footer_bottom: "World Pharmacists' Day 2026 · Federal Ministry of Health — General Directorate of Pharmacy.",
     form_full_name_required: "Please enter your full name.",
     form_profession_required: "Please select your profession.",
     form_email_required: "Please enter your email address.",
@@ -137,186 +303,24 @@ const translations = {
     form_success_title: "Registration successful",
     form_success_message: "Participant ID: {code}. A confirmation has been recorded.",
     form_fail_title: "Couldn't submit registration",
-    form_fail_message: "Please check your connection, or verify supabase-config.js has been set up with your project credentials.",
+    form_fail_message: "Please check your connection, or try again shortly.",
     question_add_title: "Add your question",
     question_add_message: "Please write a question before submitting.",
     question_success_title: "Question submitted",
     question_success_message: "Your question has been sent to the moderation queue.",
     question_fail_title: "Couldn't submit question",
-    question_fail_message: "Please check your connection, or verify supabase-config.js has been set up with your project credentials.",
-    join_online_title: "Online link not yet published",
-    join_online_message: "The official online meeting link will be published by the organizing team closer to the event.",
-    program_day_one_label: "24 September — Event Day",
-    program_day_one_session_1: "Registration & Welcome",
-    program_day_one_session_1_tag: "Opening session",
-    program_day_one_session_2: "Keynote Session",
-    program_day_one_session_2_tag: "Featured address",
-    program_day_one_session_3: "Professional Panel",
-    program_day_one_session_3_tag: "Expert discussion",
-  },
-  ar: {
-    brand_subtitle: "بوابة الفعالية الرقمية",
-    nav_home: "الرئيسية",
-    nav_about: "عن الفعالية",
-    nav_program: "البرنامج",
-    nav_speakers: "المتحدثون",
-    nav_register: "التسجيل",
-    cta_register: "تسجيل",
-    hero_kicker: "فعالية سنوية للصيادلة وقادة الرعاية الصحية",
-    hero_date: "24 سبتمبر 2026",
-    hero_text: "يوم مليء بالتبادل المهني، والرؤية العلمية، والتواصل، والتعاون لمجتمع الصيدلة والرعاية الصحية.",
-    hero_register: "سجل الحضور",
-    hero_program: "استكشف البرنامج",
-    fact_september: "سبتمبر",
-    fact_hybrid_label: "هجين",
-    fact_hybrid_text: "حضوري + أونلاين",
-    fact_hybrid_note: "(مقترح)",
-    fact_digital_label: "رقمي",
-    fact_digital_text: "مشاركة",
-    qa_register_title: "تسجيل",
-    qa_register_text: "احجز مكانك واختر طريقة حضورك.",
-    qa_register_link: "اذهب إلى التسجيل →",
-    qa_program_title: "البرنامج",
-    qa_program_text: "اعرض الجلسات والمتحدثين وجدول الفعالية.",
-    qa_program_link: "عرض البرنامج →",
-    qa_media_title: "وسائط الفعالية",
-    qa_media_text: "سيتم نشر صور وفيديوهات الفعالية هنا بعد انتهاء اليوم.",
-    qa_media_link: "عرض تحديثات الوسائط →",
-    about_eyebrow: "عن الفعالية",
-    about_title: "يوم واحد مليء بالإلهام والمعرفة والتواصل.",
-    about_text: "تجمع فعالية يوم الصيادلة 2026 بين المهنيين والطلاب وشركاء الرعاية الصحية في يوم مركّز من التعليم والقيادة والمناقشة حول مستقبل مهنة الصيدلة.",
-    feature_registration_title: "التسجيل",
-    feature_registration_text: "تسجيل بسيط وواضح للحضور والمتحدثين والشركاء.",
-    feature_registration_badge: "وصول سهل",
-    feature_attendance_title: "الحضور",
-    feature_attendance_text: "تسجيل دخول مبسط وإدارة الضيوف لتسهيل يوم الفعالية.",
-    feature_attendance_badge: "دخول سلس",
-    feature_interaction_title: "التفاعل",
-    feature_interaction_text: "تتيح للمشاركين حضورياً وأونلاين طرح الأسئلة للمشرفين.",
-    feature_interaction_badge: "جاهز للتفاعل",
-    feature_record_title: "سجل الفعالية",
-    feature_record_text: "الوصول إلى المعلومات الأساسية وتحديثات الجلسات والملفات المهمة في مكان واحد.",
-    feature_record_badge: "جاهز للفعالية",
-    program_eyebrow: "برنامج الفعالية",
-    program_title: "البرنامج في لمحة سريعة",
-    program_stamp: "مسودة — خاضع للتأكيد",
-    program_tab_label: "24 سبتمبر — يوم الفعالية",
-    speakers_eyebrow: "الأصوات الرئيسية",
-    speakers_title: "المتحدثون والمساهمون",
-    speakers_text: "أداء مميز من المهنيين والمعلمين وقادة المستقبل في مهنة الصيدلة والرعاية الصحية.",
-    speaker_name_1: "اسم المتحدث",
-    speaker_role_1: "المسمى الوظيفي / الجهة",
-    speaker_badge: "قيد التأكيد",
-    speaker_name_2: "اسم المتحدث",
-    speaker_role_2: "المسمى الوظيفي / الجهة",
-    speaker_badge_2: "قيد التأكيد",
-    speaker_name_3: "اسم المتحدث",
-    speaker_role_3: "المسمى الوظيفي / الجهة",
-    speaker_badge_3: "قيد التأكيد",
-    speaker_name_4: "اسم المتحدث",
-    speaker_role_4: "المسمى الوظيفي / الجهة",
-    speaker_badge_4: "قيد التأكيد",
-    registration_eyebrow: "التسجيل",
-    registration_title: "احجز مكانك",
-    registration_text: "انضم إلى الصيادلة والطلاب والمهنيين في الرعاية الصحية والشركاء ليوم مركّز من التعليم والحوار والتواصل المهني.",
-    registration_notice_title: "تسجيل مبكر",
-    registration_notice_text: "احجز مقعدك وساعد فريق التنظيم على التخطيط للفعالية حسب عدد الحضور والجلسات ومتطلبات المشاركة.",
-    form_full_name: "الاسم الكامل",
-    form_full_name_placeholder: "مثال: أمينة حسن",
-    form_profession: "المهنة",
-    form_profession_placeholder: "اختر مهنتك",
-    profession_pharmacist: "صيدلي",
-    profession_student: "طالب صيدلة",
-    profession_healthcare: "مهني في الرعاية الصحية",
-    profession_org: "ممثل جهة",
-    profession_guest: "ضيف",
-    profession_other: "أخرى",
-    form_email: "البريد الإلكتروني",
-    form_email_placeholder: "name@example.com",
-    form_phone: "الهاتف",
-    form_phone_placeholder: "+249 ...",
-    form_organization: "الجهة / المؤسسة",
-    form_organization_placeholder: "مثال: جمعية الصيادلة السودانية",
-    form_attendance_type: "نوع الحضور",
-    attendance_physical: "حضوري",
-    attendance_online: "أونلاين",
-    consent_text: "أوافق على استخدام المعلومات المسجلة لأغراض التسجيل في الفعالية وإدارة الحضور.",
-    form_submit: "إرسال التسجيل",
-    form_footer_text: "يتم إرسال تفاصيلك مباشرة إلى قاعدة بيانات الفعالية.",
-    questions_eyebrow: "التفاعل",
-    questions_title: "اطرح سؤالاً",
-    questions_text: "شارك سؤالك للمتحدثين والمشرفين حتى تبقى المناقشات ذات صلة وملهمة.",
-    question_name: "الاسم",
-    question_name_placeholder: "اسمك",
-    question_session: "الجلسة",
-    question_session_placeholder: "اختر جلسة",
-    question_session_1: "24 سبتمبر — الترحيب والتسجيل",
-    question_session_2: "24 سبتمبر — الجلسة الافتتاحية",
-    question_session_3: "24 سبتمبر — الجلسة المهنية",
-    question_question: "السؤال",
-    question_question_placeholder: "اكتب سؤالك",
-    question_anonymous: "إرسال مجهول",
-    question_submit: "إرسال السؤال",
-    media_eyebrow: "بعد الفعالية",
-    media_title: "الصور والفيديوهات",
-    media_text: "سيتم رفع صور وفيديوهات يوم الصيادلة 2026 هنا بعد انتهاء الفعالية.",
-    media_photos_title: "صور الفعالية",
-    media_photos_text: "ستظهر هنا مجموعة من أجمل لحظات الفعالية.",
-    media_videos_title: "فيديوهات الفعالية",
-    media_videos_text: "ستتم إضافة الكلمات واللقطات والتسجيلات المختارة هنا.",
-    media_highlights_title: "أبرز اللحظات",
-    media_highlights_text: "تابع هذا المكان لأجمل اللحظات وتحديثات الفعالية.",
-    media_status: "متاحة بعد الفعالية",
-    media_status_2: "متاحة بعد الفعالية",
-    media_status_3: "ستتوفر بعد 24 سبتمبر",
-    footer_date: "24 سبتمبر 2026",
-    footer_tag_1: "حضوري + أونلاين",
-    footer_tag_2: "تسجيل رقمي",
-    footer_tag_3: "حضور QR",
-    footer_bottom: "يوم الصيادلة 2026 · يوم من التعلم والقيادة والمجتمع.",
-    form_full_name_required: "يرجى إدخال الاسم الكامل.",
-    form_profession_required: "يرجى اختيار المهنة.",
-    form_email_required: "يرجى إدخال البريد الإلكتروني.",
-    form_email_invalid: "يرجى إدخال بريد إلكتروني صحيح.",
-    form_phone_required: "يرجى إدخال رقم الهاتف.",
-    form_phone_invalid: "يرجى إدخال رقم هاتف صحيح.",
-    form_attendance_required: "يرجى اختيار طريقة الحضور.",
-    form_consent_required: "يجب الموافقة على الشروط للتسجيل.",
-    form_check_title: "راجع النموذج",
-    form_check_message: "بعض الحقول المطلوبة تحتاج إلى مراجعة قبل الإرسال.",
-    form_success_title: "نجح التسجيل",
-    form_success_message: "معرف المشارك: {code}. تم تسجيل تأكيد التسجيل.",
-    form_fail_title: "تعذّر إرسال التسجيل",
-    form_fail_message: "يرجى التحقق من الاتصال أو التأكد من إعداد ملف supabase-config.js بالبيانات الصحيحة.",
-    question_add_title: "أضف سؤالك",
-    question_add_message: "يرجى كتابة سؤال قبل الإرسال.",
-    question_success_title: "تم إرسال السؤال",
-    question_success_message: "تم إرسال سؤالك إلى قائمة المراجعة.",
-    question_fail_title: "تعذّر إرسال السؤال",
-    question_fail_message: "يرجى التحقق من الاتصال أو التأكد من إعداد ملف supabase-config.js بالبيانات الصحيحة.",
-    join_online_title: "الرابط الإلكتروني لم يُنشر بعد",
-    join_online_message: "سيتم نشر رابط الاجتماع الرسمي من قبل فريق التنظيم بالقرب من موعد الفعالية.",
-    program_day_one_label: "24 سبتمبر — يوم الفعالية",
-    program_day_one_session_1: "التسجيل والترحيب",
-    program_day_one_session_1_tag: "جلسة افتتاحية",
-    program_day_one_session_2: "الجلسة الافتتاحية",
-    program_day_one_session_2_tag: "كلمة بارزة",
-    program_day_one_session_3: "الجلسة المهنية",
-    program_day_one_session_3_tag: "نقاش خبراء",
+    question_fail_message: "Please check your connection, or try again shortly.",
   },
 };
 
 function t(key, fallback = "") {
-  return translations[appState.lang]?.[key] || translations.en[key] || fallback || key;
+  return translations[appState.lang]?.[key] || translations.ar[key] || fallback || key;
 }
 
 function setLanguage(lang) {
-  appState.lang = lang === "ar" ? "ar" : "en";
+  appState.lang = lang === "en" ? "en" : "ar";
   document.documentElement.lang = appState.lang;
   document.documentElement.dir = appState.lang === "ar" ? "rtl" : "ltr";
-
-  const programTab = document.querySelector(".tab-btn");
-  if (programTab) programTab.textContent = t("program_day_one_label");
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n;
@@ -328,13 +332,19 @@ function setLanguage(lang) {
     if (t(key)) el.placeholder = t(key);
   });
 
+  document.querySelectorAll(".brand-title, .footer-title").forEach((el) => {
+    el.textContent = t("event_title");
+  });
+  document.querySelector(".hero-title").textContent = t("event_title");
+
   const langToggle = document.getElementById("lang-toggle");
   if (langToggle) {
-    langToggle.querySelector(".lang-toggle-label").textContent = appState.lang === "ar" ? "اللغة: English" : "Language: العربية";
+    langToggle.querySelector(".lang-toggle-label").textContent = appState.lang === "ar" ? "Language: English" : "اللغة: العربية";
     langToggle.setAttribute("aria-label", appState.lang === "ar" ? "Switch to English" : "تبديل اللغة إلى العربية");
   }
 
-  renderProgramDay("1");
+  renderProgram();
+  renderDonors();
 }
 
 function escapeHtml(str) {
@@ -343,21 +353,49 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+/* ==========================================================================
+   Toasts — was referenced 6x in this file but never implemented; fixed here.
+   ========================================================================== */
+function showToast({ title, message, variant = "success", duration = 5000 }) {
+  const container = document.getElementById("toast-container");
+  if (!container) return;
+
+  const toast = document.createElement("div");
+  toast.className = "toast" + (variant === "error" ? " toast-error" : "");
+  toast.innerHTML = `
+    <div class="toast-body">
+      <strong></strong>
+      <p></p>
+    </div>
+    <button type="button" class="toast-close" aria-label="close">&times;</button>
+  `;
+  toast.querySelector("strong").textContent = title || "";
+  toast.querySelector("p").textContent = message || "";
+
+  const remove = () => {
+    if (toast.parentNode) toast.parentNode.removeChild(toast);
+  };
+  toast.querySelector(".toast-close").addEventListener("click", remove);
+  container.appendChild(toast);
+
+  if (duration > 0) setTimeout(remove, duration);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initSmoothNavClose();
-  initProgramTabs();
   initRegistrationForm();
   initQuestionForm();
+  initScheduleDownload();
 
   const langToggle = document.getElementById("lang-toggle");
   if (langToggle) {
     langToggle.addEventListener("click", () => {
-      setLanguage(appState.lang === "en" ? "ar" : "en");
+      setLanguage(appState.lang === "ar" ? "en" : "ar");
     });
   }
 
-  setLanguage("en");
+  setLanguage("ar");
 });
 
 /* ==========================================================================
@@ -376,7 +414,6 @@ function initMobileMenu() {
 }
 
 function initSmoothNavClose() {
-  // Close the mobile menu after a nav link is tapped.
   const header = document.querySelector(".site-header");
   const toggle = document.getElementById("menu-toggle");
   document.querySelectorAll(".main-nav .nav-link").forEach((link) => {
@@ -390,61 +427,165 @@ function initSmoothNavClose() {
   });
 }
 
-const PROGRAM_DATA = {
-  1: {
+/* ==========================================================================
+   Program / Schedule — 25 September 2026, in three phases
+   Source: official event schedule (Scheduel.md)
+   ========================================================================== */
+const SCHEDULE_DATA = [
+  {
+    time: { ar: "08:30 – 11:30", en: "08:30 – 11:30" },
+    title: { ar: "الافتتاح والبروتوكول", en: "Opening & Protocol" },
     sessions: [
-      { time: "09:00", titleKey: "program_day_one_session_1", tagKey: "program_day_one_session_1_tag" },
-      { time: "09:30", titleKey: "program_day_one_session_2", tagKey: "program_day_one_session_2_tag" },
-      { time: "11:00", titleKey: "program_day_one_session_3", tagKey: "program_day_one_session_3_tag" },
+      {
+        time: "08:30 – 09:30",
+        title: { ar: "الاستقبال وافتتاح المعرض", en: "Reception & Exhibition Opening" },
+        desc: {
+          ar: "التسجيل واستراحة القهوة والشاي؛ افتتاح المعرض الدوائي وقص الشريط بحضور وزير الصحة الاتحادي والضيوف.",
+          en: "Registration and a coffee/tea break; opening of the pharmaceutical exhibition and ribbon-cutting with the Federal Minister of Health and guests.",
+        },
+      },
+      {
+        time: "09:30 – 10:45",
+        title: { ar: "الجلسة الافتتاحية والكلمات الرسمية", en: "Opening Session & Official Remarks" },
+        desc: {
+          ar: "آيات من القرآن الكريم؛ كلمة رئيس اللجنة المنظمة (د. محمد مروان)؛ كلمات ممثلي طلاب الصيدلة والقطاع الخاص والمنظمات؛ كلمة وكيل وزارة الصحة الاتحادية (د. علي بابكر سيد أحمد)؛ الكلمة الرئيسية لوزير الصحة الاتحادي (بروفيسور هيثم محمد إبراهيم).",
+          en: "Qur'an recitation; remarks by the Organizing Committee Chair (Dr. Mohamed Marwan); brief remarks from pharmacy student, private sector, and organization representatives; remarks by the Undersecretary of the Federal Ministry of Health (Dr. Ali Babiker Sid Ahmed); keynote address by the Federal Minister of Health (Prof. Haitham Mohamed Ibrahim).",
+        },
+      },
+      {
+        time: "10:45 – 11:30",
+        title: { ar: "العرض الوثائقي وإطلاق المبادرة الوطنية", en: "Documentary & National Initiative Launch" },
+        desc: {
+          ar: "عرض الفيلم الوثائقي الافتتاحي؛ لقاء الضيوف والمتحدثين؛ الإعلان الرسمي وإطلاق «مبادرة إعادة تأهيل دار الصيدلة».",
+          en: "Screening of the opening documentary; a meet-and-greet with guests and speakers; the official announcement and launch of the 'Pharmacy Rehabilitation Initiative'.",
+        },
+      },
     ],
   },
-};
+  {
+    time: { ar: "11:30 – 14:30", en: "11:30 – 14:30" },
+    title: { ar: "الجلسة العلمية والاستثمار", en: "Scientific Session & Investment" },
+    sessions: [
+      {
+        time: "11:30 – 13:30",
+        title: { ar: "مستقبل الصيدلة والتحول الرقمي", en: "The Future of Pharmacy & Digital Transformation" },
+        desc: {
+          ar: "الممارسة الصيدلانية ومسار الصيدلي — د. نجم الدين أحمد المجذوب؛ التخصصات الصيدلانية: التحديات والفرص — د. خالد صابر؛ التصنيع الدوائي والخارطة الاستثمارية والنباتات الطبية — بروفيسور عاصم يوسف؛ الصيدلة والتحول الرقمي — د. جمال خلف الله؛ إضاءات من منصاتنا الرقمية على أفضل المشاركات؛ مناقشة تفاعلية وقراءة التوصيات النهائية.",
+          en: "Pharmacy Practice & the Pharmacist's Career Path — Dr. Najm Aldeen Ahmed Elmagzoub; Pharmaceutical Specialties: Challenges & Opportunities — Dr. Khalid Saber; Pharmaceutical Manufacturing, Investment Roadmap & Medicinal Plants — Prof. Asim Yousif; Pharmacy & Digital Transformation — Dr. Jamal Khalafalla; highlights from our digital platforms' top contributions; interactive discussion and final recommendations.",
+        },
+      },
+      {
+        time: "13:30 – 14:30",
+        title: { ar: "استراحة الغداء وجولة المعرض", en: "Lunch Break & Exhibition Tour" },
+        desc: {
+          ar: "استراحة الغداء، التواصل الاجتماعي، وجولة داخل المعرض الدوائي.",
+          en: "Lunch, networking, and a tour of the pharmaceutical exhibition.",
+        },
+      },
+    ],
+  },
+  {
+    time: { ar: "14:30 – 17:00", en: "14:30 – 17:00" },
+    title: { ar: "المبادرات المجتمعية والتكريم", en: "Community Initiatives & Recognition" },
+    sessions: [
+      {
+        time: "14:30 – 15:30",
+        title: { ar: "المبادرات المجتمعية والبرنامج المصاحب", en: "Community Initiatives & Accompanying Program" },
+        desc: {
+          ar: "عرض فيلم وثائقي واستعراض المبادرات المجتمعية — د. هالة موسى؛ تسليط الضوء على الأنشطة والأثر المجتمعي للصيدلي.",
+          en: "Documentary screening and an overview of community initiatives — Dr. Hala Musa; a spotlight on the pharmacist's community activities and impact.",
+        },
+      },
+      {
+        time: "15:30 – 16:30",
+        title: { ar: "فقرة التكريم والاحتفاء", en: "Recognition & Appreciation" },
+        desc: {
+          ar: "تكريم الشخصيات الصيدلانية المتميزة، الداعمين، والشركاء.",
+          en: "Honoring distinguished pharmacy figures, supporters, and partners.",
+        },
+      },
+      {
+        time: "16:30 – 17:00",
+        title: { ar: "الحفل الختامي", en: "Closing Ceremony" },
+        desc: {
+          ar: "الكلمات الختامية الرسمية؛ التقاط الصورة الجماعية الرسمية وإسدال الستار على الفعالية.",
+          en: "Official closing remarks; the official group photo, and the curtain closes on the event.",
+        },
+      },
+    ],
+  },
+];
 
-function renderProgramDay(day) {
+function renderProgram() {
   const panel = document.getElementById("program-panel");
   if (!panel) return;
-  const data = PROGRAM_DATA[day];
-  if (!data) return;
+  const lang = appState.lang;
 
-  panel.innerHTML = data.sessions
-    .map(
-      (s) => `
-      <div class="session-row">
-        <span class="session-time">${escapeHtml(s.time)}</span>
-        <div>
-          <span class="session-title">${escapeHtml(t(s.titleKey))}</span>
-          <span class="session-tag">${escapeHtml(t(s.tagKey))}</span>
-        </div>
-      </div>`
-    )
-    .join("");
+  panel.innerHTML = SCHEDULE_DATA.map(
+    (phase, i) => `
+    <div class="program-phase">
+      <div class="program-phase-head">
+        <span class="program-phase-num">${i + 1}</span>
+        <span class="program-phase-title">${escapeHtml(phase.title[lang])}</span>
+        <span class="program-phase-time">${escapeHtml(phase.time[lang])}</span>
+      </div>
+      <div class="program-panel">
+        ${phase.sessions
+          .map(
+            (s) => `
+          <div class="session-row">
+            <span class="session-time">${escapeHtml(s.time)}</span>
+            <div>
+              <span class="session-title">${escapeHtml(s.title[lang])}</span>
+              <span class="session-desc">${escapeHtml(s.desc[lang])}</span>
+            </div>
+          </div>`
+          )
+          .join("")}
+      </div>
+    </div>`
+  ).join("");
 }
 
-function initProgramTabs() {
-  const tabs = document.querySelectorAll(".tab-btn");
-  if (!tabs.length) return;
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      tabs.forEach((t) => {
-        t.classList.remove("is-active");
-        t.setAttribute("aria-selected", "false");
-      });
-      tab.classList.add("is-active");
-      tab.setAttribute("aria-selected", "true");
-      renderProgramDay(tab.dataset.day);
-
-      const panel = document.getElementById("program-panel");
-      if (panel) panel.setAttribute("aria-labelledby", tab.id);
-    });
+function initScheduleDownload() {
+  const btn = document.getElementById("download-schedule");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    window.print();
   });
-
-  // Initial render
-  renderProgramDay("1");
 }
 
 /* ==========================================================================
-   Registration form
+   Donors / Supporters
+   --------------------------------------------------------------------------
+   Placeholder data — replace with the real list of donors/sponsors.
+   Each entry just needs a bilingual name and tier; the plaque styling
+   (logo watermark, card shape) is shared across every entry automatically.
+   ========================================================================== */
+const DONORS_DATA = [
+  { name: { ar: "اسم الجهة الداعمة 1", en: "Sponsor Name 1" }, tier: { ar: "الراعي الذهبي", en: "Gold Sponsor" } },
+  { name: { ar: "اسم الجهة الداعمة 2", en: "Sponsor Name 2" }, tier: { ar: "الراعي الفضي", en: "Silver Sponsor" } },
+  { name: { ar: "اسم الجهة الداعمة 3", en: "Sponsor Name 3" }, tier: { ar: "الراعي البرونزي", en: "Bronze Sponsor" } },
+  { name: { ar: "اسم الجهة الداعمة 4", en: "Sponsor Name 4" }, tier: { ar: "شريك داعم", en: "Supporting Partner" } },
+];
+
+function renderDonors() {
+  const grid = document.getElementById("donors-grid");
+  if (!grid) return;
+  const lang = appState.lang;
+
+  grid.innerHTML = DONORS_DATA.map(
+    (d) => `
+    <div class="donor-plaque">
+      <div class="donor-plaque-name">${escapeHtml(d.name[lang])}</div>
+      <div class="donor-plaque-tier">${escapeHtml(d.tier[lang])}</div>
+    </div>`
+  ).join("");
+}
+
+/* ==========================================================================
+   Registration form — writes to the `participants` table in Supabase.
+   Table/column names and Supabase client are unchanged from the original.
    ========================================================================== */
 function initRegistrationForm() {
   const form = document.getElementById("registration-form");
@@ -477,7 +618,7 @@ function initRegistrationForm() {
     }
 
     // -----------------------------------------------------------------
-    // Data model matching the future `participants` table in Supabase:
+    // Data model matches the `participants` table in Supabase:
     //   id, full_name, profession, email, phone, organization,
     //   attendance_type, registration_date, attendance_status
     // -----------------------------------------------------------------
@@ -492,7 +633,7 @@ function initRegistrationForm() {
       attendance_status: "registered",
     };
 
-    submitRegistrationDemo(participant, form);
+    submitRegistration(participant, form);
   });
 }
 
@@ -540,11 +681,7 @@ function generateParticipantCode() {
   return `PH26-${random}`;
 }
 
-/**
- * Live submission handler — writes to the `participants` table in Supabase.
- * Requires SUPABASE_URL and SUPABASE_ANON_KEY to be set in supabase-config.js.
- */
-async function submitRegistrationDemo(participant, form) {
+async function submitRegistration(participant, form) {
   const participantCode = generateParticipantCode();
   const submitBtn = form.querySelector('button[type="submit"]');
   if (submitBtn) submitBtn.disabled = true;
@@ -580,7 +717,7 @@ async function submitRegistrationDemo(participant, form) {
 }
 
 /* ==========================================================================
-   Question / interaction form (demo)
+   Question / interaction form — writes to the `questions` table in Supabase.
    ========================================================================== */
 function initQuestionForm() {
   const form = document.getElementById("question-form");

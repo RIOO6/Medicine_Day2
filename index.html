@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pharmacists' Day 2026 — Digital Event Portal</title>
-<meta name="description" content="Digital participation and event-management concept for Pharmacists' Day 2026, Sudan.">
+<title>اليوم العالمي للصيادلة 2026 — وزارة الصحة الاتحادية</title>
+<meta name="description" content="اليوم العالمي للصيادلة 2026 — الجمعة 25 سبتمبر 2026، وزارة الصحة الاتحادية، الإدارة العامة للصيادلة. التسجيل، البرنامج، والمتحدثون.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
@@ -19,28 +19,29 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="top">
   <div class="header-inner">
-    <a href="#top" class="brand" aria-label="Pharmacists' Day 2026 home">
-      <img src="logo.jpeg" alt="Pharmacists' Day 2026 organizing body logo" class="brand-logo">
+    <a href="#top" class="brand" aria-label="الصفحة الرئيسية — اليوم العالمي للصيادلة 2026">
+      <img src="logo.jpeg" alt="شعار وزارة الصحة الاتحادية" class="brand-logo">
       <span class="brand-text">
-        <span class="brand-title">Pharmacists&rsquo; Day 2026</span>
-        <span class="brand-subtitle" data-i18n="brand_subtitle">Digital Event Portal</span>
+        <span class="brand-title">اليوم العالمي للصيادلة 2026</span>
+        <span class="brand-subtitle" data-i18n="brand_subtitle">تمكين الصيدلي لمستقبل أكثر صحة</span>
       </span>
     </a>
 
     <nav class="main-nav" id="main-nav">
-      <a href="#top" class="nav-link" data-i18n="nav_home">Home</a>
-      <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
-      <a href="#program" class="nav-link" data-i18n="nav_program">Program</a>
-      <a href="#speakers" class="nav-link" data-i18n="nav_speakers">Speakers</a>
-      <a href="#registration" class="nav-link" data-i18n="nav_register">Registration</a>
+      <a href="#top" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+      <a href="#about" class="nav-link" data-i18n="nav_about">عن الفعالية</a>
+      <a href="#program" class="nav-link" data-i18n="nav_program">البرنامج</a>
+      <a href="#speakers" class="nav-link" data-i18n="nav_speakers">المتحدثون</a>
+      <a href="#donors" class="nav-link" data-i18n="nav_donors">الداعمون</a>
+      <a href="#registration" class="nav-link" data-i18n="nav_register">التسجيل</a>
     </nav>
 
     <div class="header-actions">
-      <button type="button" id="lang-toggle" class="lang-toggle" aria-label="Switch language">
-        <span class="lang-toggle-label">Language: العربية</span>
+      <button type="button" id="lang-toggle" class="lang-toggle" aria-label="تبديل اللغة">
+        <span class="lang-toggle-label">Language: English</span>
       </button>
-      <a href="#registration" class="btn btn-primary btn-small" data-i18n="cta_register">Register</a>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+      <a href="#registration" class="btn btn-primary btn-small" data-i18n="cta_register">تسجيل</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -53,27 +54,28 @@
   <section class="hero">
     <div class="hero-inner">
       <img src="logo.jpeg" alt="" class="hero-emblem" aria-hidden="true">
-      <p class="hero-kicker" data-i18n="hero_kicker">Annual event for pharmacists and healthcare leaders</p>
-      <h1 class="hero-title">Pharmacists&rsquo; Day 2026</h1>
-      <p class="hero-date" data-i18n="hero_date">24 September 2026</p>
-      <p class="hero-text" data-i18n="hero_text">A memorable day of professional exchange, scientific insight, networking, and collaboration for the pharmacy and healthcare community.</p>
+      <p class="hero-kicker" data-i18n="hero_kicker">وزارة الصحة الاتحادية — الإدارة العامة للصيادلة</p>
+      <h1 class="hero-title">اليوم العالمي للصيادلة 2026</h1>
+      <p class="hero-slogan" data-i18n="hero_slogan">تمكين الصيدلي لمستقبل أكثر صحة</p>
+      <p class="hero-date" data-i18n="hero_date">الجمعة، 25 سبتمبر 2026</p>
+      <p class="hero-text" data-i18n="hero_text">يوم وطني يجمع الصيادلة وطلاب الصيدلة وقادة الرعاية الصحية والشركاء في جلسات علمية، تكريم، ومبادرات مجتمعية.</p>
       <div class="hero-actions">
-        <a href="#registration" class="btn btn-primary" data-i18n="hero_register">Register to Attend</a>
-        <a href="#program" class="btn btn-outline" data-i18n="hero_program">Explore Program</a>
+        <a href="#registration" class="btn btn-primary" data-i18n="hero_register">سجّل حضورك</a>
+        <a href="#program" class="btn btn-outline" data-i18n="hero_program">استعرض البرنامج</a>
       </div>
 
       <div class="hero-facts">
         <div class="hero-fact">
-          <span class="hero-fact-num">24</span>
-          <span class="hero-fact-label" data-i18n="fact_september">September</span>
+          <span class="hero-fact-num">25</span>
+          <span class="hero-fact-label" data-i18n="fact_september">سبتمبر 2026</span>
         </div>
         <div class="hero-fact">
-          <span class="hero-fact-num" data-i18n="fact_hybrid_label">Hybrid</span>
-          <span class="hero-fact-label"><span data-i18n="fact_hybrid_text">Physical + Online</span> <em data-i18n="fact_hybrid_note">(proposed)</em></span>
+          <span class="hero-fact-num" data-i18n="fact_phases_label">3</span>
+          <span class="hero-fact-label" data-i18n="fact_phases_text">مراحل رئيسية</span>
         </div>
         <div class="hero-fact">
-          <span class="hero-fact-num" data-i18n="fact_digital_label">Digital</span>
-          <span class="hero-fact-label" data-i18n="fact_digital_text">Participation</span>
+          <span class="hero-fact-num" data-i18n="fact_digital_label">رقمي</span>
+          <span class="hero-fact-label" data-i18n="fact_digital_text">تسجيل وتفاعل</span>
         </div>
       </div>
     </div>
@@ -84,54 +86,114 @@
     <div class="section-inner quick-actions-grid">
       <a href="#registration" class="action-card">
         <span class="action-num">01</span>
-        <h3 data-i18n="qa_register_title">Register</h3>
-        <p data-i18n="qa_register_text">Reserve your place and choose how you will attend.</p>
-        <span class="action-go" data-i18n="qa_register_link">Go to registration &rarr;</span>
+        <h3 data-i18n="qa_register_title">التسجيل</h3>
+        <p data-i18n="qa_register_text">احجز مكانك واختر طريقة حضورك.</p>
+        <span class="action-go" data-i18n="qa_register_link">اذهب إلى التسجيل ←</span>
       </a>
       <a href="#program" class="action-card">
         <span class="action-num">02</span>
-        <h3 data-i18n="qa_program_title">Program</h3>
-        <p data-i18n="qa_program_text">View sessions, speakers and the event schedule.</p>
-        <span class="action-go" data-i18n="qa_program_link">View program &rarr;</span>
+        <h3 data-i18n="qa_program_title">البرنامج</h3>
+        <p data-i18n="qa_program_text">اطّلع على مراحل اليوم والجلسات والمتحدثين.</p>
+        <span class="action-go" data-i18n="qa_program_link">عرض البرنامج ←</span>
       </a>
-      <a href="#online" class="action-card">
+      <a href="#donors" class="action-card">
         <span class="action-num">03</span>
-        <h3 data-i18n="qa_media_title">Event Media</h3>
-        <p data-i18n="qa_media_text">Photos and videos from the event will be shared here after the day.</p>
-        <span class="action-go" data-i18n="qa_media_link">See media updates &rarr;</span>
+        <h3 data-i18n="qa_donors_title">الداعمون</h3>
+        <p data-i18n="qa_donors_text">تعرّف على الجهات الداعمة للفعالية.</p>
+        <span class="action-go" data-i18n="qa_donors_link">عرض الداعمين ←</span>
       </a>
     </div>
   </section>
 
-  <!-- ============ ABOUT / DIGITAL CONCEPT ============ -->
+  <!-- ============ ABOUT ============ -->
   <section class="about" id="about">
     <div class="section-inner">
       <div class="about-intro">
-        <p class="eyebrow" data-i18n="about_eyebrow">The Digital Concept</p>
-        <h2 data-i18n="about_title">One event, one digital experience.</h2>
-        <p class="lead" data-i18n="about_text">The proposed digital system acts as a simple digital layer around the physical event. Participants register once, organizers receive structured information, and both physical and online audiences have a clear way to participate.</p>
+        <p class="eyebrow" data-i18n="about_eyebrow">عن الفعالية</p>
+        <h2 data-i18n="about_title">يوم واحد، تجربة رقمية متكاملة.</h2>
+        <p class="lead" data-i18n="about_text">تسجيل واحد يكفي: يستلم المشاركون معرّفاً رقمياً، ويحصل فريق التنظيم على بيانات منظمة، ويملك الحضور الحضوري والإلكتروني قناة واضحة للمشاركة والتفاعل طوال اليوم.</p>
       </div>
 
       <div class="feature-grid">
         <div class="feature-card">
-          <h3 data-i18n="feature_registration_title">Registration</h3>
-          <p data-i18n="feature_registration_text">Collect participant information through a structured digital form.</p>
-          <span class="badge badge-green" data-i18n="feature_registration_badge">Database Ready</span>
+          <h3 data-i18n="feature_registration_title">التسجيل</h3>
+          <p data-i18n="feature_registration_text">استمارة رقمية واحدة لتسجيل جميع بيانات المشاركين.</p>
+          <span class="badge badge-green" data-i18n="feature_registration_badge">متاح الآن</span>
         </div>
         <div class="feature-card">
-          <h3 data-i18n="feature_attendance_title">Attendance</h3>
-          <p data-i18n="feature_attendance_text">Use participant IDs and QR check-in to reduce manual attendance work.</p>
-          <span class="badge badge-green" data-i18n="feature_attendance_badge">QR Ready</span>
+          <h3 data-i18n="feature_attendance_title">الحضور</h3>
+          <p data-i18n="feature_attendance_text">معرّف مشارك خاص بكل تسجيل لتسهيل إدارة اليوم.</p>
+          <span class="badge badge-green" data-i18n="feature_attendance_badge">جاهز</span>
         </div>
         <div class="feature-card">
-          <h3 data-i18n="feature_interaction_title">Interaction</h3>
-          <p data-i18n="feature_interaction_text">Allow physical and online participants to submit questions to moderators.</p>
-          <span class="badge badge-green" data-i18n="feature_interaction_badge">Interaction Ready</span>
+          <h3 data-i18n="feature_interaction_title">التفاعل</h3>
+          <p data-i18n="feature_interaction_text">يمكن للحضور الحضوري والإلكتروني إرسال أسئلتهم للمشرفين مباشرة.</p>
+          <span class="badge badge-green" data-i18n="feature_interaction_badge">جاهز</span>
         </div>
         <div class="feature-card">
-          <h3 data-i18n="feature_record_title">Event Record</h3>
-          <p data-i18n="feature_record_text">Keep feedback, resources and event information organized digitally.</p>
-          <span class="badge badge-neutral" data-i18n="feature_record_badge">Expandable</span>
+          <h3 data-i18n="feature_record_title">سجل الفعالية</h3>
+          <p data-i18n="feature_record_text">البرنامج، المتحدثون، وتحديثات اليوم في مكان واحد.</p>
+          <span class="badge badge-neutral" data-i18n="feature_record_badge">محدّث باستمرار</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPEAKERS ============ -->
+  <section class="speakers" id="speakers">
+    <div class="section-inner">
+      <p class="eyebrow" data-i18n="speakers_eyebrow">المتحدثون</p>
+      <h2 data-i18n="speakers_title">المتحدثون والمساهمون</h2>
+      <p class="lead" data-i18n="speakers_text">نخبة من القيادات الصحية والأكاديمية تتحدث في الجلسة الافتتاحية والجلسة العلمية ليوم 25 سبتمبر.</p>
+
+      <div class="speaker-grid">
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">ه</div>
+          <h3 data-i18n="speaker_name_1">بروفيسور هيثم محمد إبراهيم</h3>
+          <p data-i18n="speaker_role_1">وزير الصحة الاتحادي</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge_1">الكلمة الرئيسية</span>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">ع</div>
+          <h3 data-i18n="speaker_name_2">د. علي بابكر سيد أحمد</h3>
+          <p data-i18n="speaker_role_2">وكيل وزارة الصحة الاتحادية</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge_2">الجلسة الافتتاحية</span>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">م</div>
+          <h3 data-i18n="speaker_name_3">د. محمد مروان</h3>
+          <p data-i18n="speaker_role_3">رئيس اللجنة المنظمة</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge_3">الجلسة الافتتاحية</span>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">ن</div>
+          <h3 data-i18n="speaker_name_4">د. نجم الدين أحمد المجذوب</h3>
+          <p data-i18n="speaker_role_4">مدير الإدارة العامة للصيادلة</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge_4">الممارسة الصيدلانية ومسار الصيدلي</span>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">خ</div>
+          <h3 data-i18n="speaker_name_5">د. خالد صابر</h3>
+          <p data-i18n="speaker_role_5">الجلسة العلمية</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge_5">التخصصات الصيدلانية: التحديات والفرص</span>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">ع</div>
+          <h3 data-i18n="speaker_name_6">بروفيسور عاصم يوسف</h3>
+          <p data-i18n="speaker_role_6">الجلسة العلمية</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge_6">التصنيع الدوائي والخارطة الاستثمارية</span>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">ج</div>
+          <h3 data-i18n="speaker_name_7">د. جمال خلف الله</h3>
+          <p data-i18n="speaker_role_7">الجلسة العلمية</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge_7">الصيدلة والتحول الرقمي</span>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-avatar" aria-hidden="true">ه</div>
+          <h3 data-i18n="speaker_name_8">د. هالة موسى</h3>
+          <p data-i18n="speaker_role_8">الفترة المسائية</p>
+          <span class="badge badge-outline" data-i18n="speaker_badge_8">المبادرات المجتمعية</span>
         </div>
       </div>
     </div>
@@ -139,124 +201,93 @@
 
   <!-- ============ PROGRAM ============ -->
   <section class="program" id="program">
+    <div class="print-header">
+      <img src="logo.jpeg" alt="">
+      <div>
+        <h3 data-i18n="print_header_title">اليوم العالمي للصيادلة 2026</h3>
+        <p data-i18n="print_header_subtitle">وزارة الصحة الاتحادية — الإدارة العامة للصيادلة · الجمعة 25 سبتمبر 2026</p>
+      </div>
+    </div>
     <div class="section-inner">
       <div class="program-head">
         <div>
-          <p class="eyebrow eyebrow-light" data-i18n="program_eyebrow">Preliminary Program</p>
-          <h2 data-i18n="program_title">Program at a glance</h2>
+          <p class="eyebrow eyebrow-light" data-i18n="program_eyebrow">برنامج اليوم</p>
+          <h2 data-i18n="program_title">البرنامج الكامل — الجمعة 25 سبتمبر 2026</h2>
         </div>
-        <span class="stamp" data-i18n="program_stamp">Draft &mdash; Subject to Confirmation</span>
+        <div class="program-download">
+          <button type="button" id="download-schedule" class="btn btn-gold btn-small" data-i18n="program_download">تحميل البرنامج (PDF)</button>
+          <span class="program-download-note" data-i18n="program_download_note">تُفتح نافذة الطباعة — اختر «حفظ كملف PDF»</span>
+        </div>
       </div>
 
-      <div class="program-tabs" role="tablist" aria-label="Event day">
-        <button class="tab-btn is-active" role="tab" aria-selected="true" data-day="1" id="tab-day-1" data-i18n="program_tab_label">24 September &mdash; Event Day</button>
-      </div>
-
-      <div class="program-panel" id="program-panel" role="tabpanel" aria-labelledby="tab-day-1">
-        <!-- populated by script.js -->
-      </div>
-
+      <div id="program-panel"><!-- populated by script.js --></div>
     </div>
   </section>
 
-  <section class="speakers" id="speakers">
-    <div class="section-inner">
-      <p class="eyebrow" data-i18n="speakers_eyebrow">Preliminary</p>
-      <h2 data-i18n="speakers_title">Speakers &amp; Contributors</h2>
-      <p class="lead" data-i18n="speakers_text">A distinguished line-up of professionals, educators, and leaders shaping the future of pharmacy practice and healthcare excellence.</p>
-
-      <div class="speaker-grid">
-        <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">?</div>
-          <h3 data-i18n="speaker_name_1">Speaker Name</h3>
-          <p data-i18n="speaker_role_1">Professional Title / Organization</p>
-          <span class="badge badge-outline" data-i18n="speaker_badge">To Be Confirmed</span>
-        </div>
-        <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">?</div>
-          <h3 data-i18n="speaker_name_2">Speaker Name</h3>
-          <p data-i18n="speaker_role_2">Professional Title / Organization</p>
-          <span class="badge badge-outline" data-i18n="speaker_badge_2">To Be Confirmed</span>
-        </div>
-        <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">?</div>
-          <h3 data-i18n="speaker_name_3">Speaker Name</h3>
-          <p data-i18n="speaker_role_3">Professional Title / Organization</p>
-          <span class="badge badge-outline" data-i18n="speaker_badge_3">To Be Confirmed</span>
-        </div>
-        <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">?</div>
-          <h3 data-i18n="speaker_name_4">Speaker Name</h3>
-          <p data-i18n="speaker_role_4">Professional Title / Organization</p>
-          <span class="badge badge-outline" data-i18n="speaker_badge_4">To Be Confirmed</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- ============ REGISTRATION ============ -->
   <section class="registration" id="registration">
     <div class="section-inner registration-grid">
       <div class="registration-intro">
-        <p class="eyebrow" data-i18n="registration_eyebrow">Registration</p>
-        <h2 data-i18n="registration_title">Reserve your place</h2>
-        <p class="lead" data-i18n="registration_text">Join pharmacists, students, healthcare professionals, and partners for a focused day of learning, dialogue, and professional connection.</p>
+        <p class="eyebrow" data-i18n="registration_eyebrow">التسجيل</p>
+        <h2 data-i18n="registration_title">احجز مكانك</h2>
+        <p class="lead" data-i18n="registration_text">انضم إلى الصيادلة والطلاب والمهنيين في الرعاية الصحية والشركاء ليوم مركّز من التعليم والحوار والتواصل المهني.</p>
 
         <div class="notice-box">
-          <strong data-i18n="registration_notice_title">Early registration</strong>
-          <p data-i18n="registration_notice_text">Secure your seat and help the organizing team plan the day around attendees, sessions, and participation needs.</p>
+          <strong data-i18n="registration_notice_title">التسجيل المبكر</strong>
+          <p data-i18n="registration_notice_text">احجز مقعدك وساعد فريق التنظيم على التخطيط لليوم حسب عدد الحضور والجلسات ومتطلبات المشاركة.</p>
         </div>
       </div>
 
       <form class="registration-form" id="registration-form" novalidate>
         <div class="form-row">
-          <label for="full_name" data-i18n="form_full_name">Full Name</label>
-          <input type="text" id="full_name" name="full_name" data-i18n-placeholder="form_full_name_placeholder" placeholder="e.g. Amina Hassan" required>
+          <label for="full_name" data-i18n="form_full_name">الاسم الكامل</label>
+          <input type="text" id="full_name" name="full_name" data-i18n-placeholder="form_full_name_placeholder" placeholder="مثال: أمينة حسن" required>
           <span class="field-error" data-error-for="full_name"></span>
         </div>
 
         <div class="form-row">
-          <label for="profession" data-i18n="form_profession">Profession</label>
+          <label for="profession" data-i18n="form_profession">المهنة</label>
           <select id="profession" name="profession" required>
-            <option value="" disabled selected data-i18n="form_profession_placeholder">Select your profession</option>
-            <option value="Pharmacist" data-i18n="profession_pharmacist">Pharmacist</option>
-            <option value="Pharmacy Student" data-i18n="profession_student">Pharmacy Student</option>
-            <option value="Healthcare Professional" data-i18n="profession_healthcare">Healthcare Professional</option>
-            <option value="Organization Representative" data-i18n="profession_org">Organization Representative</option>
-            <option value="Guest" data-i18n="profession_guest">Guest</option>
-            <option value="Other" data-i18n="profession_other">Other</option>
+            <option value="" disabled selected data-i18n="form_profession_placeholder">اختر مهنتك</option>
+            <option value="Pharmacist" data-i18n="profession_pharmacist">صيدلي</option>
+            <option value="Pharmacy Student" data-i18n="profession_student">طالب صيدلة</option>
+            <option value="Healthcare Professional" data-i18n="profession_healthcare">مهني في الرعاية الصحية</option>
+            <option value="Organization Representative" data-i18n="profession_org">ممثل جهة</option>
+            <option value="Guest" data-i18n="profession_guest">ضيف</option>
+            <option value="Other" data-i18n="profession_other">أخرى</option>
           </select>
           <span class="field-error" data-error-for="profession"></span>
         </div>
 
         <div class="form-row form-row-split">
           <div>
-            <label for="email" data-i18n="form_email">Email</label>
+            <label for="email" data-i18n="form_email">البريد الإلكتروني</label>
             <input type="email" id="email" name="email" data-i18n-placeholder="form_email_placeholder" placeholder="name@example.com" required>
             <span class="field-error" data-error-for="email"></span>
           </div>
           <div>
-            <label for="phone" data-i18n="form_phone">Phone</label>
+            <label for="phone" data-i18n="form_phone">الهاتف</label>
             <input type="tel" id="phone" name="phone" data-i18n-placeholder="form_phone_placeholder" placeholder="+249 ..." required>
             <span class="field-error" data-error-for="phone"></span>
           </div>
         </div>
 
         <div class="form-row">
-          <label for="organization" data-i18n="form_organization">Organization / Institution</label>
-          <input type="text" id="organization" name="organization" data-i18n-placeholder="form_organization_placeholder" placeholder="e.g. Sudanese Pharmacists Association">
+          <label for="organization" data-i18n="form_organization">الجهة / المؤسسة</label>
+          <input type="text" id="organization" name="organization" data-i18n-placeholder="form_organization_placeholder" placeholder="مثال: جمعية الصيادلة السودانية">
           <span class="field-error" data-error-for="organization"></span>
         </div>
 
         <fieldset class="form-row">
-          <legend data-i18n="form_attendance_type">Attendance Type</legend>
+          <legend data-i18n="form_attendance_type">نوع الحضور</legend>
           <div class="radio-group">
             <label class="radio-option">
               <input type="radio" name="attendance_type" value="Physical" required>
-              <span data-i18n="attendance_physical">Physical</span>
+              <span data-i18n="attendance_physical">حضوري</span>
             </label>
             <label class="radio-option">
               <input type="radio" name="attendance_type" value="Online">
-              <span data-i18n="attendance_online">Online</span>
+              <span data-i18n="attendance_online">أونلاين</span>
             </label>
           </div>
           <span class="field-error" data-error-for="attendance_type"></span>
@@ -265,77 +296,77 @@
         <div class="form-row form-row-consent">
           <label class="checkbox-option">
             <input type="checkbox" id="consent" name="consent" required>
-            <span data-i18n="consent_text">I agree that the information provided may be used for event registration and attendance management.</span>
+            <span data-i18n="consent_text">أوافق على استخدام المعلومات المسجلة لأغراض التسجيل في الفعالية وإدارة الحضور.</span>
           </label>
           <span class="field-error" data-error-for="consent"></span>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-full" data-i18n="form_submit">Submit Registration</button>
-        <p class="form-footnote" data-i18n="form_footer_text">Your details are sent directly to the event database.</p>
+        <button type="submit" class="btn btn-primary btn-full" data-i18n="form_submit">إرسال التسجيل</button>
+        <p class="form-footnote" data-i18n="form_footer_text">يتم إرسال تفاصيلك مباشرة إلى قاعدة بيانات الفعالية.</p>
       </form>
     </div>
   </section>
 
+  <!-- ============ QUESTIONS ============ -->
   <section class="questions" id="questions">
     <div class="section-inner questions-grid">
       <div>
-        <p class="eyebrow" data-i18n="questions_eyebrow">Interaction</p>
-        <h2 data-i18n="questions_title">Ask a Question</h2>
-        <p class="lead" data-i18n="questions_text">Share your question for the speakers and moderators so the conversations stay relevant, thoughtful, and engaging.</p>
+        <p class="eyebrow" data-i18n="questions_eyebrow">التفاعل</p>
+        <h2 data-i18n="questions_title">اطرح سؤالاً</h2>
+        <p class="lead" data-i18n="questions_text">شارك سؤالك للمتحدثين والمشرفين حتى تبقى المناقشات ذات صلة وملهمة.</p>
       </div>
 
       <form class="question-form" id="question-form">
         <div class="form-row">
-          <label for="q_name" data-i18n="question_name">Name</label>
-          <input type="text" id="q_name" name="name" data-i18n-placeholder="question_name_placeholder" placeholder="Your name">
+          <label for="q_name" data-i18n="question_name">الاسم</label>
+          <input type="text" id="q_name" name="name" data-i18n-placeholder="question_name_placeholder" placeholder="اسمك">
         </div>
         <div class="form-row">
-          <label for="q_session" data-i18n="question_session">Session</label>
+          <label for="q_session" data-i18n="question_session">المرحلة</label>
           <select id="q_session" name="session">
-            <option value="" disabled selected data-i18n="question_session_placeholder">Select a session</option>
-            <option value="24 September — Registration & Welcome" data-i18n="question_session_1">24 September — Registration & Welcome</option>
-            <option value="24 September — Keynote Session" data-i18n="question_session_2">24 September — Keynote Session</option>
-            <option value="24 September — Professional Panel" data-i18n="question_session_3">24 September — Professional Panel</option>
+            <option value="" disabled selected data-i18n="question_session_placeholder">اختر مرحلة</option>
+            <option value="25 September — Opening & Protocol" data-i18n="question_session_1">25 سبتمبر — الافتتاح والبروتوكول</option>
+            <option value="25 September — Scientific Session & Investment" data-i18n="question_session_2">25 سبتمبر — الجلسة العلمية والاستثمار</option>
+            <option value="25 September — Community Initiatives & Recognition" data-i18n="question_session_3">25 سبتمبر — المبادرات المجتمعية والتكريم</option>
           </select>
         </div>
         <div class="form-row">
-          <label for="q_question" data-i18n="question_question">Question</label>
-          <textarea id="q_question" name="question" rows="3" data-i18n-placeholder="question_question_placeholder" placeholder="Write your question" required></textarea>
+          <label for="q_question" data-i18n="question_question">السؤال</label>
+          <textarea id="q_question" name="question" rows="3" data-i18n-placeholder="question_question_placeholder" placeholder="اكتب سؤالك" required></textarea>
         </div>
         <label class="checkbox-option checkbox-inline">
           <input type="checkbox" id="q_anonymous" name="anonymous">
-          <span data-i18n="question_anonymous">Submit anonymously</span>
+          <span data-i18n="question_anonymous">إرسال مجهول</span>
         </label>
-        <button type="submit" class="btn btn-outline-light btn-full" data-i18n="question_submit">Submit Question</button>
+        <button type="submit" class="btn btn-outline-light btn-full" data-i18n="question_submit">إرسال السؤال</button>
       </form>
     </div>
   </section>
 
-  <section class="online" id="online">
+  <!-- ============ DONORS ============ -->
+  <section class="donors" id="donors">
     <div class="section-inner">
-      <p class="eyebrow" data-i18n="media_eyebrow">After the Event</p>
-      <h2 data-i18n="media_title">Photos &amp; Videos</h2>
-      <p class="lead" data-i18n="media_text">Event photos and videos will be uploaded here after Pharmacists&rsquo; Day 2026.</p>
+      <p class="eyebrow" data-i18n="donors_eyebrow">شكر وتقدير</p>
+      <h2 data-i18n="donors_title">شكراً لداعمينا وشركائنا</h2>
+      <p class="lead" data-i18n="donors_text">نتوجه بالشكر والتقدير للجهات التي ساهمت في إنجاح اليوم العالمي للصيادلة 2026.</p>
 
-      <div class="media-grid">
-        <div class="media-placeholder">
-          <span class="media-icon" aria-hidden="true">&#9634;</span>
-          <h3 data-i18n="media_photos_title">Event Photos</h3>
-          <p data-i18n="media_photos_text">A collection of moments from the event will appear here.</p>
-          <span class="media-status" data-i18n="media_status">Available after the event</span>
+      <div class="donor-hero">
+        <!--
+          REPLACE-HEAD-PHOTO: swap this src for an actual photo of the
+          organizing body's head / minister. Keeping logo.jpeg as a
+          placeholder so the layout is never broken if it's left as-is.
+        -->
+        <img src="logo.jpeg" alt="صورة رئيس الجهة المنظمة" class="donor-hero-photo">
+        <div class="donor-hero-body">
+          <h3 data-i18n="donor_hero_name">وزارة الصحة الاتحادية</h3>
+          <p class="donor-hero-role" data-i18n="donor_hero_role">الإدارة العامة للصيادلة</p>
+          <p class="donor-hero-quote" data-i18n="donor_hero_quote">"نشكر كل داعم ساهم في جعل اليوم العالمي للصيادلة 2026 فعالية تليق بمهنة الصيدلة ورسالتها."</p>
+          <span class="donor-hero-note" data-i18n="donor_hero_note">استبدل الصورة أعلاه بصورة رئيس الجهة</span>
         </div>
-        <div class="media-placeholder">
-          <span class="media-icon" aria-hidden="true">&#9654;</span>
-          <h3 data-i18n="media_videos_title">Event Videos</h3>
-          <p data-i18n="media_videos_text">Talks, highlights, and selected recordings will be added here.</p>
-          <span class="media-status" data-i18n="media_status_2">Available after the event</span>
-        </div>
-        <div class="media-placeholder media-placeholder-featured">
-          <span class="media-icon" aria-hidden="true">&#10022;</span>
-          <h3 data-i18n="media_highlights_title">Event Highlights</h3>
-          <p data-i18n="media_highlights_text">Follow this space for memorable moments and event updates.</p>
-          <span class="media-status" data-i18n="media_status_3">Coming after 24 September</span>
-        </div>
+      </div>
+
+      <div class="donors-grid" id="donors-grid">
+        <!-- populated by script.js from DONORS_DATA -->
       </div>
     </div>
   </section>
@@ -346,18 +377,18 @@
 <footer class="site-footer">
   <div class="section-inner footer-grid">
     <div class="footer-brand">
-      <img src="logo.jpeg" alt="Pharmacists' Day 2026 organizing body logo" class="footer-logo">
-      <p class="footer-title">Pharmacists&rsquo; Day 2026</p>
-      <p class="footer-date" data-i18n="footer_date">24&ndash; September 2026</p>
+      <img src="logo.jpeg" alt="شعار وزارة الصحة الاتحادية" class="footer-logo">
+      <p class="footer-title">اليوم العالمي للصيادلة 2026</p>
+      <p class="footer-date" data-i18n="footer_date">الجمعة 25 سبتمبر 2026</p>
     </div>
     <div class="footer-tags">
-      <span data-i18n="footer_tag_1">Physical + Online</span>
-      <span data-i18n="footer_tag_2">Digital Registration</span>
-      <span data-i18n="footer_tag_3">QR Attendance</span>
+      <span data-i18n="footer_tag_1">حضوري + أونلاين</span>
+      <span data-i18n="footer_tag_2">تسجيل رقمي</span>
+      <span data-i18n="footer_tag_3">3 مراحل</span>
     </div>
   </div>
   <div class="footer-bottom">
-    <p data-i18n="footer_bottom">Pharmacists&rsquo; Day 2026 &middot; A day of learning, leadership, and community.</p>
+    <p data-i18n="footer_bottom">اليوم العالمي للصيادلة 2026 · وزارة الصحة الاتحادية — الإدارة العامة للصيادلة.</p>
   </div>
 </footer>
 
