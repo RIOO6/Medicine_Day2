@@ -803,6 +803,7 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
   color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
+.donor-plaque-representative { position: relative; z-index: 1; margin-top: 0.25rem; color: rgba(255,255,255,0.78); font-size: 0.76rem; line-height: 1.4; }
 
 /* ==========================================================================
    Media / after-event
@@ -836,6 +837,10 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
 .footer-tags span { font-size: 0.78rem; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; padding: 0.4em 0.9em; }
 .footer-bottom { border-block-start: 1px solid rgba(255,255,255,0.12); text-align: center; padding: 1.25rem 1.5rem 2rem; }
 .footer-bottom p { margin: 0; font-size: 0.78rem; color: rgba(255,255,255,0.5); max-width: none; }
+.developer-credit { margin-top: 0.45rem !important; }
+.developer-credit strong { color: rgba(255,255,255,0.82); }
+.developer-credit a { color: var(--gold-tint); text-decoration: none; }
+.developer-credit a:hover { text-decoration: underline; }
 
 /* ==========================================================================
    Toasts

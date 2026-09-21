@@ -1,7 +1,7 @@
 const appState = {
   lang: "ar",
 };
-const registrationUnlockDate = new Date(2026, 9, 24);
+const registrationUnlockDate = new Date(2026, 8, 24);
 
 /* ==========================================================================
    UI copy — bilingual dictionary (ar is the primary/default language)
@@ -55,7 +55,7 @@ const translations = {
     feature_record_badge: "محدّث باستمرار",
     speakers_eyebrow: "المتحدثون",
     speakers_title: "المتحدثون والمساهمون",
-    speakers_text: "نخبة من القيادات الصحية والأكاديمية تتحدث في الجلسة الافتتاحية والجلسة العلمية ليوم 25 سبتمبر.",
+    speakers_text: "نخبة من القيادات الصحية والأكاديمية تتحدث في الجلسة الافتتاحية والجلسة العلمية ليوم 24 سبتمبر.",
     speaker_name_1: "بروفيسور هيثم محمد إبراهيم",
     speaker_role_1: "وزير الصحة الاتحادي",
     speaker_badge_1: "الكلمة الرئيسية",
@@ -81,7 +81,7 @@ const translations = {
     speaker_role_8: "الفترة المسائية",
     speaker_badge_8: "المبادرات المجتمعية",
     print_header_title: "اليوم العالمي للصيدلي 2026",
-    print_header_subtitle: "وزارة الصحة الاتحادية — الإدارة العامة للصيدلي ·الخميس 24 سبتمبر 2026",
+    print_header_subtitle: "وزارة الصحة الاتحادية — الإدارة العامة للصيدلي · الخميس 24 سبتمبر 2026",
     program_eyebrow: "برنامج اليوم",
     program_title: "البرنامج الكامل — الخميس 24 سبتمبر 2026",
     program_download: "تحميل البرنامج (PDF)",
@@ -132,9 +132,9 @@ const translations = {
     question_name_placeholder: "اسمك",
     question_session: "المرحلة",
     question_session_placeholder: "اختر مرحلة",
-    question_session_1: "25 سبتمبر — الافتتاح والبروتوكول",
-    question_session_2: "25 سبتمبر — الجلسة العلمية والاستثمار",
-    question_session_3: "25 سبتمبر — المبادرات المجتمعية والتكريم",
+    question_session_1: "24 سبتمبر — الافتتاح والبروتوكول",
+    question_session_2: "24 سبتمبر — الجلسة العلمية والاستثمار",
+    question_session_3: "24 سبتمبر — المبادرات المجتمعية والتكريم",
     question_question: "السؤال",
     question_question_placeholder: "اكتب سؤالك",
     question_anonymous: "إرسال مجهول",
@@ -146,11 +146,13 @@ const translations = {
     donor_hero_role: "الإدارة العامة للصيدلي",
     donor_hero_quote: "\u0022نشكر كل داعم ساهم في جعل اليوم العالمي للصيدلي 2026 فعالية تليق بمهنة الصيدلة ورسالتها.\u0022",
     donor_hero_note: "استبدل الصورة أعلاه بصورة رئيس الجهة",
-    footer_date: "الجمعة 25 سبتمبر 2026",
+    footer_date: "الخميس 24 سبتمبر 2026",
     footer_tag_1: "حضوري + أونلاين",
     footer_tag_2: "تسجيل رقمي",
     footer_tag_3: "3 مراحل",
     footer_bottom: "اليوم العالمي للصيدلي 2026 · وزارة الصحة الاتحادية — الإدارة العامة للصيدلي.",
+    developer_credit_label: "تصميم وتطوير",
+    developer_credit_contact: "تواصل مع المطور",
     form_full_name_required: "يرجى إدخال الاسم الكامل.",
     form_profession_required: "يرجى اختيار المهنة.",
     form_email_required: "يرجى إدخال البريد الإلكتروني.",
@@ -220,7 +222,7 @@ const translations = {
     feature_record_badge: "Continuously Updated",
     speakers_eyebrow: "Speakers",
     speakers_title: "Speakers & Contributors",
-    speakers_text: "Distinguished health and academic leaders speaking in the opening and scientific sessions on 25 September.",
+    speakers_text: "Distinguished health and academic leaders speaking in the opening and scientific sessions on 24 September.",
     speaker_name_1: "Prof. Haitham Mohamed Ibrahim",
     speaker_role_1: "Federal Minister of Health",
     speaker_badge_1: "Keynote Address",
@@ -316,6 +318,8 @@ const translations = {
     footer_tag_2: "Digital Registration",
     footer_tag_3: "3 Phases",
     footer_bottom: "World Pharmacists' Day 2026 · Federal Ministry of Health — General Directorate of Pharmacy.",
+    developer_credit_label: "Designed and developed by",
+    developer_credit_contact: "Contact the developer",
     form_full_name_required: "Please enter your full name.",
     form_profession_required: "Please select your profession.",
     form_email_required: "Please enter your email address.",
@@ -455,7 +459,7 @@ function initSmoothNavClose() {
 }
 
 /* ==========================================================================
-   Program / Schedule — 25 September 2026, in three phases
+  Program / Schedule — 24 September 2026, in three phases
    Source: official event schedule (Scheduel.md)
    ========================================================================== */
 const SCHEDULE_DATA = [
@@ -598,14 +602,14 @@ function initScheduleDownload() {
    So the section never looks broken while photos are still being collected.
    ========================================================================== */
 const DONORS_DATA = [
-  { name: { ar: "VITA PHARMA", en: "Sponsor Name 1" }, logo: "sponsor-1-logo.jpg", photo: "sponsor-1-representative.jpg" },
-  { name: { ar: "DAWINA", en: "Sponsor Name 2" }, logo: "sponsor-2-logo.jpg", photo: "sponsor-2-representative.jpg" },
-  { name: { ar: "ELITE PHARMA", en: "Sponsor Name 3" }, logo: "sponsor-3-logo.jpg", photo: "sponsor-3-representative.jpg" },
-  { name: { ar: "IBAA", en: "Sponsor Name 4" }, logo: "sponsor-4-logo.jpg", photo: "sponsor-4-representative.jpg" },
-  { name: { ar: "AL-FORQAN", en: "Sponsor Name 4" }, logo: "sponsor-5-logo.jpg", photo: "sponsor-5-representative.jpg" },
-  { name: { ar: "EL-SHAHBA", en: "Sponsor Name 4" }, logo: "sponsor-6-logo.jpg", photo: "sponsor-6-representative.jpg" },
-  { name: { ar: "WAFRAPHARMA", en: "Sponsor Name 4" }, logo: "sponsor-7-logo.jpg", photo: "sponsor-7-representative.jpg" },
-  { name: { ar: "Who will be next?", en: "Sponsor Name 4" }, logo: "next.svg", photo: "next.svg" },
+  { name: { ar: "VITA PHARMA", en: "VITA PHARMA" }, representative: { ar: "", en: "" }, logo: "sponsor-1-logo.jpg", photo: "sponsor-1-representative.jpg" },
+  { name: { ar: "DAWINA", en: "DAWINA" }, representative: { ar: "", en: "" }, logo: "sponsor-2-logo.jpg", photo: "sponsor-2-representative.jpg" },
+  { name: { ar: "ELITE PHARMA", en: "ELITE PHARMA" }, representative: { ar: "", en: "" }, logo: "sponsor-3-logo.jpg", photo: "sponsor-3-representative.png" },
+  { name: { ar: "IBAA", en: "IBAA" }, representative: { ar: "", en: "" }, logo: "sponsor-4-logo.jpg", photo: "sponsor-4-representative.jpg" },
+  { name: { ar: "AL-FORQAN", en: "AL-FORQAN" }, representative: { ar: "", en: "" }, logo: "sponsor-5-logo.jpg", photo: "sponsor-5-representative.jpg" },
+  { name: { ar: "EL-SHAHBA", en: "EL-SHAHBA" }, representative: { ar: "", en: "" }, logo: "sponsor-6-logo.jpg", photo: "sponsor-6-representative.jpg" },
+  { name: { ar: "WAFRAPHARMA", en: "WAFRAPHARMA" }, representative: { ar: "", en: "" }, logo: "sponsor-7-logo.jpg", photo: "sponsor-7-representative.jpg" },
+  { name: { ar: "من سيكون التالي؟", en: "Who will be next?" }, representative: { ar: "", en: "" }, logo: "next.svg", photo: "next.svg" },
 ];
 
 function renderDonors() {
@@ -615,6 +619,7 @@ function renderDonors() {
 
   grid.innerHTML = DONORS_DATA.map((d) => {
     const name = escapeHtml(d.name[lang]);
+    const representative = escapeHtml(d.representative?.[lang] || "");
     const initial = escapeHtml(d.name[lang].trim().charAt(0));
     return `
     <div class="donor-plaque">
@@ -635,6 +640,7 @@ function renderDonors() {
           <span class="donor-plaque-photo-fallback" style="display:none;" aria-hidden="true">${initial}</span>
         </div>
         <div class="donor-plaque-name">${name}</div>
+        ${representative ? `<div class="donor-plaque-representative">${representative}</div>` : ""}
       </div>
     </div>`;
   }).join("");
