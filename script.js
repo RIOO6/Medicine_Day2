@@ -1,7 +1,7 @@
 const appState = {
   lang: "ar",
 };
-const registrationUnlockDate = new Date(2026, 8, 24);
+const registrationUnlockDate = new Date(2026, 9, 24);
 
 /* ==========================================================================
    UI copy — bilingual dictionary (ar is the primary/default language)
