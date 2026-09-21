@@ -604,7 +604,7 @@ function initScheduleDownload() {
 const DONORS_DATA = [
   { name: { ar: "VITA PHARMA", en: "VITA PHARMA" }, representative: { ar: "", en: "" }, logo: "sponsor-1-logo.jpg", photo: "sponsor-1-representative.jpg" },
   { name: { ar: "DAWINA", en: "DAWINA" }, representative: { ar: "", en: "" }, logo: "sponsor-2-logo.jpg", photo: "sponsor-2-representative.jpg" },
-  { name: { ar: "ELITE PHARMA", en: "ELITE PHARMA" }, representative: { ar: "", en: "" }, logo: "sponsor-3-logo.jpg", photo: "sponsor-3-representative.png" },
+  { name: { ar: "ELITE PHARMA Compony", en: "ELITE PHARMA Company" }, representative: { ar: "د.أحمد علي فهمي", en: "Dr.Ahmed Ali Fahmy" }, logo: "sponsor-3-logo.jpg", photo: "sponsor-3-representative.png" },
   { name: { ar: "IBAA", en: "IBAA" }, representative: { ar: "", en: "" }, logo: "sponsor-4-logo.jpg", photo: "sponsor-4-representative.jpg" },
   { name: { ar: "AL-FORQAN", en: "AL-FORQAN" }, representative: { ar: "", en: "" }, logo: "sponsor-5-logo.jpg", photo: "sponsor-5-representative.jpg" },
   { name: { ar: "EL-SHAHBA", en: "EL-SHAHBA" }, representative: { ar: "", en: "" }, logo: "sponsor-6-logo.jpg", photo: "sponsor-6-representative.jpg" },
