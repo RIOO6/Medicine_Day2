@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>اليوم العالمي للصيادلة 2026 — وزارة الصحة الاتحادية</title>
-<meta name="description" content="اليوم العالمي للصيادلة 2026 — الجمعة 25 سبتمبر 2026، وزارة الصحة الاتحادية، الإدارة العامة للصيادلة. التسجيل، البرنامج، والمتحدثون.">
+<title>اليوم العالمي للصيدلة 2026 — وزارة الصحة الاتحادية</title>
+<meta name="description" content="اليوم العالمي للصيدلة 2026 — الجمعة 25 سبتمبر 2026، وزارة الصحة الاتحادية، الإدارة العامة للصيدلة. التسجيل، البرنامج، والمتحدثون.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
@@ -19,10 +19,10 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="top">
   <div class="header-inner">
-    <a href="#top" class="brand" aria-label="الصفحة الرئيسية — اليوم العالمي للصيادلة 2026">
+    <a href="#top" class="brand" aria-label="الصفحة الرئيسية — اليوم العالمي للصيدلة 2026">
       <img src="logo.jpeg" alt="شعار وزارة الصحة الاتحادية" class="brand-logo">
       <span class="brand-text">
-        <span class="brand-title">اليوم العالمي للصيادلة 2026</span>
+        <span class="brand-title">اليوم العالمي للصيدلة 2026</span>
         <span class="brand-subtitle" data-i18n="brand_subtitle">تمكين الصيدلي لمستقبل أكثر صحة</span>
       </span>
     </a>
@@ -40,7 +40,7 @@
       <button type="button" id="lang-toggle" class="lang-toggle" aria-label="تبديل اللغة">
         <span class="lang-toggle-label">Language: English</span>
       </button>
-      <a href="#registration" class="btn btn-primary btn-small" data-i18n="cta_register">التسجيل</a>
+      <a href="#registration" class="btn btn-primary btn-small" data-i18n="cta_register">تسجيل</a>
       <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span>
       </button>
@@ -54,8 +54,8 @@
   <section class="hero">
     <div class="hero-inner">
       <img src="logo.jpeg" alt="" class="hero-emblem" aria-hidden="true">
-      <p class="hero-kicker" data-i18n="hero_kicker">وزارة الصحة الاتحادية — الإدارة العامة للصيادلة</p>
-      <h1 class="hero-title">اليوم العالمي للصيادلة 2026</h1>
+      <p class="hero-kicker" data-i18n="hero_kicker">وزارة الصحة الاتحادية — الإدارة العامة للصيدلة</p>
+      <h1 class="hero-title">اليوم العالمي للصيدلة 2026</h1>
       <p class="hero-slogan" data-i18n="hero_slogan">تمكين الصيدلي لمستقبل أكثر صحة</p>
       <p class="hero-date" data-i18n="hero_date">الجمعة، 25 سبتمبر 2026</p>
       <p class="hero-text" data-i18n="hero_text">يوم وطني يجمع الصيادلة وطلاب الصيدلة وقادة الرعاية الصحية والشركاء في جلسات علمية، تكريم، ومبادرات مجتمعية.</p>
@@ -117,7 +117,7 @@
       <div class="feature-grid">
         <div class="feature-card">
           <h3 data-i18n="feature_registration_title">التسجيل</h3>
-          <p data-i18n="feature_registration_text"> استمارة رقمية واحدة لتسجيل جميع بيانات المشاركين.</p>
+          <p data-i18n="feature_registration_text">استمارة رقمية واحدة لتسجيل جميع بيانات المشاركين.</p>
           <span class="badge badge-green" data-i18n="feature_registration_badge">متاح الآن</span>
         </div>
         <div class="feature-card">
@@ -146,51 +146,82 @@
       <h2 data-i18n="speakers_title">المتحدثون والمساهمون</h2>
       <p class="lead" data-i18n="speakers_text">نخبة من القيادات الصحية والأكاديمية تتحدث في الجلسة الافتتاحية والجلسة العلمية ليوم 25 سبتمبر.</p>
 
+      <!--
+        Speaker photos: each card looks for speaker-N.jpg next to index.html.
+        Until those files exist, onerror hides the broken image and shows
+        the initial-letter fallback instead, so nothing looks broken.
+        Just drop in speaker-1.jpg ... speaker-8.jpg (same numbering as below)
+        whenever the real photos are ready — no code changes needed.
+      -->
       <div class="speaker-grid">
         <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">ه</div>
+          <div class="speaker-photo">
+            <img src="speaker-1.jpg" alt="بروفيسور هيثم محمد إبراهيم" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="speaker-photo-fallback" style="display:none;" aria-hidden="true">ه</span>
+          </div>
           <h3 data-i18n="speaker_name_1">بروفيسور هيثم محمد إبراهيم</h3>
           <p data-i18n="speaker_role_1">وزير الصحة الاتحادي</p>
           <span class="badge badge-outline" data-i18n="speaker_badge_1">الكلمة الرئيسية</span>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">ع</div>
+          <div class="speaker-photo">
+            <img src="speaker-2.jpg" alt="د. علي بابكر سيد أحمد" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="speaker-photo-fallback" style="display:none;" aria-hidden="true">ع</span>
+          </div>
           <h3 data-i18n="speaker_name_2">د. علي بابكر سيد أحمد</h3>
           <p data-i18n="speaker_role_2">وكيل وزارة الصحة الاتحادية</p>
           <span class="badge badge-outline" data-i18n="speaker_badge_2">الجلسة الافتتاحية</span>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">م</div>
+          <div class="speaker-photo">
+            <img src="speaker-3.jpg" alt="د. محمد مروان" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="speaker-photo-fallback" style="display:none;" aria-hidden="true">م</span>
+          </div>
           <h3 data-i18n="speaker_name_3">د. محمد مروان</h3>
           <p data-i18n="speaker_role_3">رئيس اللجنة المنظمة</p>
           <span class="badge badge-outline" data-i18n="speaker_badge_3">الجلسة الافتتاحية</span>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">ن</div>
+          <div class="speaker-photo">
+            <img src="speaker-4.jpg" alt="د. نجم الدين أحمد المجذوب" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="speaker-photo-fallback" style="display:none;" aria-hidden="true">ن</span>
+          </div>
           <h3 data-i18n="speaker_name_4">د. نجم الدين أحمد المجذوب</h3>
-          <p data-i18n="speaker_role_4">مدير الإدارة العامة للصيادلة</p>
+          <p data-i18n="speaker_role_4">مدير الإدارة العامة للصيدلة</p>
           <span class="badge badge-outline" data-i18n="speaker_badge_4">الممارسة الصيدلانية ومسار الصيدلي</span>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">خ</div>
+          <div class="speaker-photo">
+            <img src="speaker-5.jpg" alt="د. خالد صابر" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="speaker-photo-fallback" style="display:none;" aria-hidden="true">خ</span>
+          </div>
           <h3 data-i18n="speaker_name_5">د. خالد صابر</h3>
           <p data-i18n="speaker_role_5">الجلسة العلمية</p>
           <span class="badge badge-outline" data-i18n="speaker_badge_5">التخصصات الصيدلانية: التحديات والفرص</span>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">ع</div>
+          <div class="speaker-photo">
+            <img src="speaker-6.jpg" alt="بروفيسور عاصم يوسف" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="speaker-photo-fallback" style="display:none;" aria-hidden="true">ع</span>
+          </div>
           <h3 data-i18n="speaker_name_6">بروفيسور عاصم يوسف</h3>
           <p data-i18n="speaker_role_6">الجلسة العلمية</p>
           <span class="badge badge-outline" data-i18n="speaker_badge_6">التصنيع الدوائي والخارطة الاستثمارية</span>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">ج</div>
+          <div class="speaker-photo">
+            <img src="speaker-7.jpg" alt="د. جمال خلف الله" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="speaker-photo-fallback" style="display:none;" aria-hidden="true">ج</span>
+          </div>
           <h3 data-i18n="speaker_name_7">د. جمال خلف الله</h3>
           <p data-i18n="speaker_role_7">الجلسة العلمية</p>
           <span class="badge badge-outline" data-i18n="speaker_badge_7">الصيدلة والتحول الرقمي</span>
         </div>
         <div class="speaker-card">
-          <div class="speaker-avatar" aria-hidden="true">ه</div>
+          <div class="speaker-photo">
+            <img src="speaker-8.jpg" alt="د. هالة موسى" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <span class="speaker-photo-fallback" style="display:none;" aria-hidden="true">ه</span>
+          </div>
           <h3 data-i18n="speaker_name_8">د. هالة موسى</h3>
           <p data-i18n="speaker_role_8">الفترة المسائية</p>
           <span class="badge badge-outline" data-i18n="speaker_badge_8">المبادرات المجتمعية</span>
@@ -204,8 +235,8 @@
     <div class="print-header">
       <img src="logo.jpeg" alt="">
       <div>
-        <h3 data-i18n="print_header_title">اليوم العالمي للصيادلة 2026</h3>
-        <p data-i18n="print_header_subtitle">وزارة الصحة الاتحادية — الإدارة العامة للصيادلة · الجمعة 25 سبتمبر 2026</p>
+        <h3 data-i18n="print_header_title">اليوم العالمي للصيدلة 2026</h3>
+        <p data-i18n="print_header_subtitle">وزارة الصحة الاتحادية — الإدارة العامة للصيدلة · الجمعة 25 سبتمبر 2026</p>
       </div>
     </div>
     <div class="section-inner">
@@ -348,7 +379,7 @@
     <div class="section-inner">
       <p class="eyebrow" data-i18n="donors_eyebrow">شكر وتقدير</p>
       <h2 data-i18n="donors_title">شكراً لداعمينا وشركائنا</h2>
-      <p class="lead" data-i18n="donors_text">نتوجه بالشكر والتقدير للجهات التي ساهمت في إنجاح اليوم العالمي للصيادلة 2026.</p>
+      <p class="lead" data-i18n="donors_text">نتوجه بالشكر والتقدير للجهات التي ساهمت في إنجاح اليوم العالمي للصيدلة 2026.</p>
 
       <div class="donor-hero">
         <!--
@@ -358,10 +389,10 @@
         -->
         <img src="logo.jpeg" alt="صورة رئيس الجهة المنظمة" class="donor-hero-photo">
         <div class="donor-hero-body">
-          <h3 data-i18n="donor_hero_name">وزارة الصحة الاتحادية</h3>
-          <p class="donor-hero-role" data-i18n="donor_hero_role">الإدارة العامة للصيادلة</p>
-          <p class="donor-hero-quote" data-i18n="donor_hero_quote">"نشكر كل داعم ساهم في جعل اليوم العالمي للصيادلة 2026 فعالية تليق بمهنة الصيدلة ورسالتها."</p>
-          <span class="donor-hero-note" data-i18n="donor_hero_note">استبدل الصورة أعلاه بصورة رئيس الجهة</span>
+          <h3 class="donor_hero_name">وزارة الصحة الاتحادية - الإدارة العامة للصيدلة</h3>
+          
+          <p class="donor-hero-quote" data-i18n="donor_hero_quote">"نشكر كل داعم ساهم في جعل اليوم العالمي للصيدلة 2026 فعالية تليق بمهنة الصيدلة ورسالتها."</p>
+
         </div>
       </div>
 
@@ -378,7 +409,7 @@
   <div class="section-inner footer-grid">
     <div class="footer-brand">
       <img src="logo.jpeg" alt="شعار وزارة الصحة الاتحادية" class="footer-logo">
-      <p class="footer-title">اليوم العالمي للصيادلة 2026</p>
+      <p class="footer-title">اليوم العالمي للصيدلة 2026</p>
       <p class="footer-date" data-i18n="footer_date">الجمعة 25 سبتمبر 2026</p>
     </div>
     <div class="footer-tags">
@@ -388,7 +419,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p data-i18n="footer_bottom">اليوم العالمي للصيادلة 2026 · وزارة الصحة الاتحادية — الإدارة العامة للصيادلة.</p>
+    <p data-i18n="footer_bottom">اليوم العالمي للصيدلة 2026 · وزارة الصحة الاتحادية — الإدارة العامة للصيدلة.</p>
   </div>
 </footer>
 

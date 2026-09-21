@@ -1,4 +1,3 @@
-
 const appState = {
   lang: "ar",
 };
@@ -558,15 +557,26 @@ function initScheduleDownload() {
 /* ==========================================================================
    Donors / Supporters
    --------------------------------------------------------------------------
-   Placeholder data — replace with the real list of donors/sponsors.
-   Each entry just needs a bilingual name and tier; the plaque styling
-   (logo watermark, card shape) is shared across every entry automatically.
+   No hierarchy — every sponsor gets an identical plaque, same size, same
+   treatment, listed in a plain grid. Add real entries here as they're
+   confirmed (any number, any order — nothing about position implies rank).
+
+   Each entry expects two image files placed next to index.html:
+     logo           → sponsor-N-logo.jpg           (background of the plaque)
+     representative → sponsor-N-representative.jpg  (cropped photo, foreground)
+   Until those files exist:
+     - a missing logo falls back to the Ministry emblem (logo.jpeg)
+     - a missing representative photo falls back to the sponsor's initial
+   So the section never looks broken while photos are still being collected.
    ========================================================================== */
 const DONORS_DATA = [
-  { name: { ar: "اسم الجهة الداعمة 1", en: "Sponsor Name 1" }, tier: { ar: "الراعي الذهبي", en: "Gold Sponsor" } },
-  { name: { ar: "اسم الجهة الداعمة 2", en: "Sponsor Name 2" }, tier: { ar: "الراعي الفضي", en: "Silver Sponsor" } },
-  { name: { ar: "اسم الجهة الداعمة 3", en: "Sponsor Name 3" }, tier: { ar: "الراعي البرونزي", en: "Bronze Sponsor" } },
-  { name: { ar: "اسم الجهة الداعمة 4", en: "Sponsor Name 4" }, tier: { ar: "شريك داعم", en: "Supporting Partner" } },
+  { name: { ar: "VITA PHARMA", en: "Sponsor Name 1" }, logo: "sponsor-1-logo.jpg", photo: "sponsor-1-representative.jpg" },
+  { name: { ar: "DAWINA", en: "Sponsor Name 2" }, logo: "sponsor-2-logo.jpg", photo: "sponsor-2-representative.jpg" },
+  { name: { ar: "ELITE PHARMA", en: "Sponsor Name 3" }, logo: "sponsor-3-logo.jpg", photo: "sponsor-3-representative.jpg" },
+  { name: { ar: "IBAA", en: "Sponsor Name 4" }, logo: "sponsor-4-logo.jpg", photo: "sponsor-4-representative.jpg" },
+  { name: { ar: "AL-FORQAN", en: "Sponsor Name 4" }, logo: "sponsor-5-logo.jpg", photo: "sponsor-4-representative.jpg" },
+  { name: { ar: "EL-SHAHBA", en: "Sponsor Name 4" }, logo: "sponsor-6-logo.jpg", photo: "sponsor-4-representative.jpg" },
+  { name: { ar: "IBAA", en: "Sponsor Name 4" }, logo: "next.svg", photo: "next.svg" },
 ];
 
 function renderDonors() {
@@ -574,13 +584,31 @@ function renderDonors() {
   if (!grid) return;
   const lang = appState.lang;
 
-  grid.innerHTML = DONORS_DATA.map(
-    (d) => `
+  grid.innerHTML = DONORS_DATA.map((d) => {
+    const name = escapeHtml(d.name[lang]);
+    const initial = escapeHtml(d.name[lang].trim().charAt(0));
+    return `
     <div class="donor-plaque">
-      <div class="donor-plaque-name">${escapeHtml(d.name[lang])}</div>
-      <div class="donor-plaque-tier">${escapeHtml(d.tier[lang])}</div>
-    </div>`
-  ).join("");
+      <img
+        class="donor-plaque-bg"
+        src="${escapeHtml(d.logo)}"
+        alt=""
+        aria-hidden="true"
+        onerror="this.onerror=null; this.src='logo.jpeg';"
+      >
+      <div class="donor-plaque-body">
+        <div class="donor-plaque-photo">
+          <img
+            src="${escapeHtml(d.photo)}"
+            alt="${name}"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          >
+          <span class="donor-plaque-photo-fallback" style="display:none;" aria-hidden="true">${initial}</span>
+        </div>
+        <div class="donor-plaque-name">${name}</div>
+      </div>
+    </div>`;
+  }).join("");
 }
 
 /* ==========================================================================
