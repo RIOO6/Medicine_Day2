@@ -602,9 +602,10 @@ const DONORS_DATA = [
   { name: { ar: "DAWINA", en: "Sponsor Name 2" }, logo: "sponsor-2-logo.jpg", photo: "sponsor-2-representative.jpg" },
   { name: { ar: "ELITE PHARMA", en: "Sponsor Name 3" }, logo: "sponsor-3-logo.jpg", photo: "sponsor-3-representative.jpg" },
   { name: { ar: "IBAA", en: "Sponsor Name 4" }, logo: "sponsor-4-logo.jpg", photo: "sponsor-4-representative.jpg" },
-  { name: { ar: "AL-FORQAN", en: "Sponsor Name 4" }, logo: "sponsor-5-logo.jpg", photo: "sponsor-4-representative.jpg" },
-  { name: { ar: "EL-SHAHBA", en: "Sponsor Name 4" }, logo: "sponsor-6-logo.jpg", photo: "sponsor-4-representative.jpg" },
-  { name: { ar: "IBAA", en: "Sponsor Name 4" }, logo: "next.svg", photo: "next.svg" },
+  { name: { ar: "AL-FORQAN", en: "Sponsor Name 4" }, logo: "sponsor-5-logo.jpg", photo: "sponsor-5-representative.jpg" },
+  { name: { ar: "EL-SHAHBA", en: "Sponsor Name 4" }, logo: "sponsor-6-logo.jpg", photo: "sponsor-6-representative.jpg" },
+  { name: { ar: "WAFRAPHARMA", en: "Sponsor Name 4" }, logo: "sponsor-7-logo.jpg", photo: "sponsor-7-representative.jpg" },
+  { name: { ar: "Who will be next?", en: "Sponsor Name 4" }, logo: "next.svg", photo: "next.svg" },
 ];
 
 function renderDonors() {
