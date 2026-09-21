@@ -1,6 +1,7 @@
 const appState = {
   lang: "ar",
 };
+const registrationUnlockDate = new Date(2026, 8, 24);
 
 /* ==========================================================================
    UI copy — bilingual dictionary (ar is the primary/default language)
@@ -14,11 +15,12 @@ const translations = {
     nav_program: "البرنامج",
     nav_speakers: "المتحدثون",
     nav_donors: "الداعمون",
+    nav_contact: "تواصل معنا",
     nav_register: "التسجيل",
     cta_register: "تسجيل",
     hero_kicker: "وزارة الصحة الاتحادية — الإدارة العامة للصيدلي",
     hero_slogan: "تمكين الصيدلي لمستقبل أكثر صحة",
-    hero_date: "الجمعة، 25 سبتمبر 2026",
+    hero_date: "الجمعة، 24 سبتمبر 2026",
     hero_text: "يوم وطني يجمع الصيادلة وطلاب الصيدلة وقادة الرعاية الصحية والشركاء في جلسات علمية، تكريم، ومبادرات مجتمعية.",
     hero_register: "سجّل حضورك",
     hero_program: "استعرض البرنامج",
@@ -79,9 +81,9 @@ const translations = {
     speaker_role_8: "الفترة المسائية",
     speaker_badge_8: "المبادرات المجتمعية",
     print_header_title: "اليوم العالمي للصيدلي 2026",
-    print_header_subtitle: "وزارة الصحة الاتحادية — الإدارة العامة للصيدلي · الجمعة 25 سبتمبر 2026",
+    print_header_subtitle: "وزارة الصحة الاتحادية — الإدارة العامة للصيدلي ·الخميس 24 سبتمبر 2026",
     program_eyebrow: "برنامج اليوم",
-    program_title: "البرنامج الكامل — الجمعة 25 سبتمبر 2026",
+    program_title: "البرنامج الكامل — الخميس 24 سبتمبر 2026",
     program_download: "تحميل البرنامج (PDF)",
     program_download_note: "تُفتح نافذة الطباعة — اختر «حفظ كملف PDF»",
     registration_eyebrow: "التسجيل",
@@ -89,6 +91,10 @@ const translations = {
     registration_text: "انضم إلى الصيادلة والطلاب والمهنيين في الرعاية الصحية والشركاء ليوم مركّز من التعليم والحوار والتواصل المهني.",
     registration_notice_title: "التسجيل المبكر",
     registration_notice_text: "احجز مقعدك وساعد فريق التنظيم على التخطيط لليوم حسب عدد الحضور والجلسات ومتطلبات المشاركة.",
+    registration_locked_title: "التسجيل مغلق مؤقتاً",
+    registration_locked_text: "يفتح التسجيل يوم 24 سبتمبر 2026، تزامناً مع يوم الاحتفال.",
+    registration_open_title: "التسجيل مفتوح",
+    registration_open_text: "يمكنك الآن إرسال بياناتك للتسجيل في الفعالية.",
     form_full_name: "الاسم الكامل",
     form_full_name_placeholder: "مثال: أمينة حسن",
     form_profession: "المهنة",
@@ -111,6 +117,14 @@ const translations = {
     consent_text: "أوافق على استخدام المعلومات المسجلة لأغراض التسجيل في الفعالية وإدارة الحضور.",
     form_submit: "إرسال التسجيل",
     form_footer_text: "يتم إرسال تفاصيلك مباشرة إلى قاعدة بيانات الفعالية.",
+    contact_eyebrow: "تواصل معنا",
+    contact_title: "نحن هنا لمساعدتك",
+    contact_text: "للاستفسارات حول الفعالية أو التسجيل، تواصل مع فريق التنظيم عبر القناة المناسبة لك.",
+    contact_email_label: "البريد الإلكتروني",
+    contact_facebook_label: "فيسبوك",
+    contact_facebook_text: "تابع آخر الأخبار والتحديثات",
+    contact_whatsapp_label: "واتساب",
+    contact_whatsapp_text: "راسل فريق التنظيم مباشرة",
     questions_eyebrow: "التفاعل",
     questions_title: "اطرح سؤالاً",
     questions_text: "شارك سؤالك للمتحدثين والمشرفين حتى تبقى المناقشات ذات صلة وملهمة.",
@@ -166,11 +180,12 @@ const translations = {
     nav_program: "Program",
     nav_speakers: "Speakers",
     nav_donors: "Supporters",
+    nav_contact: "Contact",
     nav_register: "Registration",
     cta_register: "Register",
     hero_kicker: "Federal Ministry of Health — General Directorate of Pharmacy",
     hero_slogan: "Empowering the Pharmacist for a Healthier Future",
-    hero_date: "Friday, 25 September 2026",
+    hero_date: "Thursday, 24 September 2026",
     hero_text: "A national day bringing together pharmacists, pharmacy students, healthcare leaders and partners for scientific sessions, recognition, and community initiatives.",
     hero_register: "Register to Attend",
     hero_program: "Explore Program",
@@ -231,9 +246,9 @@ const translations = {
     speaker_role_8: "Afternoon Phase",
     speaker_badge_8: "Community Initiatives",
     print_header_title: "World Pharmacists' Day 2026",
-    print_header_subtitle: "Federal Ministry of Health — General Directorate of Pharmacy · Friday 25 September 2026",
+    print_header_subtitle: "Federal Ministry of Health — General Directorate of Pharmacy · Thursday 24 September 2026",
     program_eyebrow: "Day Program",
-    program_title: "Full Program — Friday 25 September 2026",
+    program_title: "Full Program — Thursday 24 September 2026",
     program_download: "Download Schedule (PDF)",
     program_download_note: "Opens the print dialog — choose “Save as PDF”",
     registration_eyebrow: "Registration",
@@ -241,6 +256,10 @@ const translations = {
     registration_text: "Join pharmacists, students, healthcare professionals, and partners for a focused day of learning, dialogue, and professional connection.",
     registration_notice_title: "Early registration",
     registration_notice_text: "Secure your seat and help the organizing team plan the day around attendees, sessions, and participation needs.",
+    registration_locked_title: "Registration is temporarily closed",
+    registration_locked_text: "Registration opens on 24 September 2026, on the celebration day.",
+    registration_open_title: "Registration is open",
+    registration_open_text: "You can now submit your details to register for the event.",
     form_full_name: "Full Name",
     form_full_name_placeholder: "e.g. Amina Hassan",
     form_profession: "Profession",
@@ -263,6 +282,14 @@ const translations = {
     consent_text: "I agree that the information provided may be used for event registration and attendance management.",
     form_submit: "Submit Registration",
     form_footer_text: "Your details are sent directly to the event database.",
+    contact_eyebrow: "Contact Us",
+    contact_title: "We are here to help",
+    contact_text: "For questions about the event or registration, contact the organizing team through the channel that suits you.",
+    contact_email_label: "Email",
+    contact_facebook_label: "Facebook",
+    contact_facebook_text: "Follow the latest news and updates",
+    contact_whatsapp_label: "WhatsApp",
+    contact_whatsapp_text: "Message the organizing team directly",
     questions_eyebrow: "Interaction",
     questions_title: "Ask a Question",
     questions_text: "Share your question for the speakers and moderators so the conversations stay relevant, thoughtful, and engaging.",
@@ -270,9 +297,9 @@ const translations = {
     question_name_placeholder: "Your name",
     question_session: "Phase",
     question_session_placeholder: "Select a phase",
-    question_session_1: "25 September — Opening & Protocol",
-    question_session_2: "25 September — Scientific Session & Investment",
-    question_session_3: "25 September — Community Initiatives & Recognition",
+    question_session_1: "24 September — Opening & Protocol",
+    question_session_2: "24 September — Scientific Session & Investment",
+    question_session_3: "24 September — Community Initiatives & Recognition",
     question_question: "Question",
     question_question_placeholder: "Write your question",
     question_anonymous: "Submit anonymously",
@@ -284,7 +311,7 @@ const translations = {
     donor_hero_role: "General Directorate of Pharmacy",
     donor_hero_quote: "\u0022We thank every supporter who helped make World Pharmacists' Day 2026 an event worthy of the pharmacy profession and its mission.\u0022",
     donor_hero_note: "Replace the photo above with a photo of the organizing body's head",
-    footer_date: "Friday 25 September 2026",
+    footer_date: "Thursday 24 September 2026",
     footer_tag_1: "Physical + Online",
     footer_tag_2: "Digital Registration",
     footer_tag_3: "3 Phases",
@@ -344,6 +371,7 @@ function setLanguage(lang) {
 
   renderProgram();
   renderDonors();
+  updateRegistrationLock();
 }
 
 function escapeHtml(str) {
@@ -619,8 +647,20 @@ function initRegistrationForm() {
   const form = document.getElementById("registration-form");
   if (!form) return;
 
+  updateRegistrationLock();
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    if (new Date() < registrationUnlockDate) {
+      showToast({
+        title: t("registration_locked_title"),
+        message: t("registration_locked_text"),
+        variant: "error",
+      });
+      return;
+    }
+
     clearFieldErrors(form);
 
     const formData = new FormData(form);
@@ -663,6 +703,22 @@ function initRegistrationForm() {
 
     submitRegistration(participant, form);
   });
+}
+
+function updateRegistrationLock() {
+  const form = document.getElementById("registration-form");
+  if (!form) return;
+
+  const submitBtn = form.querySelector("[data-registration-submit]");
+  const lockNotice = form.closest(".registration").querySelector(".registration-lock-notice");
+  const registrationOpen = new Date() >= registrationUnlockDate;
+
+  if (submitBtn) submitBtn.disabled = !registrationOpen;
+  if (lockNotice) {
+    lockNotice.querySelector("strong").textContent = t(registrationOpen ? "registration_open_title" : "registration_locked_title");
+    lockNotice.querySelector("p").textContent = t(registrationOpen ? "registration_open_text" : "registration_locked_text");
+    lockNotice.classList.toggle("is-open", registrationOpen);
+  }
 }
 
 function validateRegistration(values) {
