@@ -274,7 +274,7 @@
       <form class="registration-form" id="registration-form" novalidate>
         <div class="form-row">
           <label for="full_name" data-i18n="form_full_name">الاسم الكامل</label>
-          <input type="text" id="full_name" name="full_name" data-i18n-placeholder="form_full_name_placeholder" placeholder="مثال: أمينة حسن" required>
+          <input type="text" id="full_name" name="full_name" data-i18n-placeholder="form_full_name_placeholder" placeholder="مثال: أمينة حسن" maxlength="100" required>
           <span class="field-error" data-error-for="full_name"></span>
         </div>
 
@@ -295,19 +295,19 @@
         <div class="form-row form-row-split">
           <div>
             <label for="email" data-i18n="form_email">البريد الإلكتروني</label>
-            <input type="email" id="email" name="email" data-i18n-placeholder="form_email_placeholder" placeholder="name@example.com" required>
+            <input type="email" id="email" name="email" data-i18n-placeholder="form_email_placeholder" placeholder="name@example.com" maxlength="254" required>
             <span class="field-error" data-error-for="email"></span>
           </div>
           <div>
             <label for="phone" data-i18n="form_phone">الهاتف</label>
-            <input type="tel" id="phone" name="phone" data-i18n-placeholder="form_phone_placeholder" placeholder="+249 ..." required>
+            <input type="tel" id="phone" name="phone" data-i18n-placeholder="form_phone_placeholder" placeholder="+249 ..." maxlength="25" required>
             <span class="field-error" data-error-for="phone"></span>
           </div>
         </div>
 
         <div class="form-row">
           <label for="organization" data-i18n="form_organization">الجهة / المؤسسة</label>
-          <input type="text" id="organization" name="organization" data-i18n-placeholder="form_organization_placeholder" placeholder="مثال: جمعية الصيادلة السودانية">
+          <input type="text" id="organization" name="organization" data-i18n-placeholder="form_organization_placeholder" placeholder="مثال: جمعية الصيادلة السودانية" maxlength="150">
           <span class="field-error" data-error-for="organization"></span>
         </div>
 
@@ -358,7 +358,7 @@
       <form class="question-form" id="question-form">
         <div class="form-row">
           <label for="q_name" data-i18n="question_name">الاسم</label>
-          <input type="text" id="q_name" name="name" data-i18n-placeholder="question_name_placeholder" placeholder="اسمك">
+          <input type="text" id="q_name" name="name" data-i18n-placeholder="question_name_placeholder" placeholder="اسمك" maxlength="100">
         </div>
         <div class="form-row">
           <label for="q_session" data-i18n="question_session">المرحلة</label>
@@ -367,11 +367,12 @@
             <option value="24 September — Opening & Protocol" data-i18n="question_session_1">24 سبتمبر — الافتتاح والبروتوكول</option>
             <option value="24 September — Scientific Session & Investment" data-i18n="question_session_2">24 سبتمبر — الجلسة العلمية والاستثمار</option>
             <option value="24 September — Community Initiatives & Recognition" data-i18n="question_session_3">24 سبتمبر — المبادرات المجتمعية والتكريم</option>
+            <option value="Other" data-i18n="question_session_other">أخرى</option>
           </select>
         </div>
         <div class="form-row">
           <label for="q_question" data-i18n="question_question">السؤال</label>
-          <textarea id="q_question" name="question" rows="3" data-i18n-placeholder="question_question_placeholder" placeholder="اكتب سؤالك" required></textarea>
+          <textarea id="q_question" name="question" rows="3" data-i18n-placeholder="question_question_placeholder" placeholder="اكتب سؤالك" maxlength="1000" required></textarea>
         </div>
         <label class="checkbox-option checkbox-inline">
           <input type="checkbox" id="q_anonymous" name="anonymous">

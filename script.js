@@ -173,6 +173,10 @@ const translations = {
     form_email_invalid: "يرجى إدخال بريد إلكتروني صحيح.",
     form_phone_required: "يرجى إدخال رقم الهاتف.",
     form_phone_invalid: "يرجى إدخال رقم هاتف صحيح.",
+    form_full_name_too_long: "يجب ألا يتجاوز الاسم الكامل 100 حرف.",
+    form_email_too_long: "يجب ألا يتجاوز البريد الإلكتروني 254 حرفاً.",
+    form_phone_too_long: "يجب ألا يتجاوز الهاتف 25 حرفاً.",
+    form_organization_too_long: "يجب ألا تتجاوز الجهة أو المؤسسة 150 حرفاً.",
     form_attendance_required: "يرجى اختيار طريقة الحضور.",
     form_consent_required: "يجب الموافقة على الشروط للتسجيل.",
     form_check_title: "راجع النموذج",
@@ -183,6 +187,8 @@ const translations = {
     form_fail_message: "يرجى التحقق من الاتصال، أو المحاولة لاحقاً.",
     question_add_title: "أضف سؤالك",
     question_add_message: "يرجى كتابة سؤال قبل الإرسال.",
+    question_name_too_long: "يجب ألا يتجاوز الاسم 100 حرف.",
+    question_too_long: "يجب ألا يتجاوز السؤال 1000 حرف.",
     question_success_title: "تم إرسال السؤال",
     question_success_message: "تم إرسال سؤالك إلى قائمة المراجعة.",
     question_fail_title: "تعذّر إرسال السؤال",
@@ -354,6 +360,10 @@ const translations = {
     form_email_invalid: "Please enter a valid email address.",
     form_phone_required: "Please enter a phone number.",
     form_phone_invalid: "Please enter a valid phone number.",
+    form_full_name_too_long: "Full name must not exceed 100 characters.",
+    form_email_too_long: "Email must not exceed 254 characters.",
+    form_phone_too_long: "Phone must not exceed 25 characters.",
+    form_organization_too_long: "Organization must not exceed 150 characters.",
     form_attendance_required: "Please choose how you will attend.",
     form_consent_required: "Consent is required to register.",
     form_check_title: "Check the form",
@@ -364,6 +374,8 @@ const translations = {
     form_fail_message: "Please check your connection, or try again shortly.",
     question_add_title: "Add your question",
     question_add_message: "Please write a question before submitting.",
+    question_name_too_long: "Name must not exceed 100 characters.",
+    question_too_long: "Question must not exceed 1,000 characters.",
     question_success_title: "Question submitted",
     question_success_message: "Your question has been sent to the moderation queue.",
     question_fail_title: "Couldn't submit question",
@@ -790,20 +802,26 @@ function validateRegistration(values) {
   const errors = {};
 
   if (!values.full_name) errors.full_name = t("form_full_name_required");
+  else if (values.full_name.length > 100) errors.full_name = t("form_full_name_too_long");
   if (!values.profession) errors.profession = t("form_profession_required");
 
   if (!values.email) {
     errors.email = t("form_email_required");
+  } else if (values.email.length > 254) {
+    errors.email = t("form_email_too_long");
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
     errors.email = t("form_email_invalid");
   }
 
   if (!values.phone) {
     errors.phone = t("form_phone_required");
+  } else if (values.phone.length > 25) {
+    errors.phone = t("form_phone_too_long");
   } else if (!/^[0-9+\s()-]{6,}$/.test(values.phone)) {
     errors.phone = t("form_phone_invalid");
   }
 
+  if (values.organization.length > 150) errors.organization = t("form_organization_too_long");
   if (!values.attendance_type) errors.attendance_type = t("form_attendance_required");
   if (!values.consent) errors.consent = t("form_consent_required");
 
@@ -877,6 +895,7 @@ function initQuestionForm() {
 
     const formData = new FormData(form);
     const question = (formData.get("question") || "").toString().trim();
+    const questionName = (formData.get("name") || "").toString().trim();
 
     if (!question) {
       showToast({
@@ -887,9 +906,18 @@ function initQuestionForm() {
       return;
     }
 
+    if (question.length > 1000 || questionName.length > 100) {
+      showToast({
+        title: t("form_check_title"),
+        message: question.length > 1000 ? t("question_too_long") : t("question_name_too_long"),
+        variant: "error",
+      });
+      return;
+    }
+
     const isAnonymous = formData.get("anonymous") === "on";
     const questionEntry = {
-      name: isAnonymous ? "anonymous" : (formData.get("name") || "").toString().trim() || null,
+      name: isAnonymous ? "anonymous" : questionName || null,
       session: (formData.get("session") || "").toString().trim() || null,
       question,
       anonymous: isAnonymous,
