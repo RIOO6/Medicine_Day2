@@ -15,6 +15,7 @@ const translations = {
     nav_program: "البرنامج",
     nav_speakers: "المتحدثون",
     nav_donors: "الداعمون",
+    nav_other_events: "احتفالات أخرى",
     nav_contact: "تواصل معنا",
     nav_register: "التسجيل",
     cta_register: "تسجيل",
@@ -145,6 +146,16 @@ const translations = {
     donors_eyebrow: "شكر وتقدير",
     donors_title: "شكراً لداعمينا وشركائنا",
     donors_text: "نتوجه بالشكر والتقدير للجهات التي ساهمت في إنجاح اليوم العالمي للصيدلي 2026.",
+    other_events_eyebrow: "احتفالات أخرى",
+    other_events_title: "شاهد احتفالات الصيادلة حول العالم",
+    other_events_text: "يمكنك استكشاف صفحات ومبادرات أخرى للاطلاع على استعداداتهم، وقد تجد بثاً مباشراً عبر فيسبوك في يوم الاحتفال.",
+    other_events_notice_title: "ملاحظة مهمة",
+    other_events_notice_text: "هذه روابط لاحتفالات منفصلة وليست جزءاً من موقعنا. قد لا تحتوي على نفس البرنامج أو الجداول أو المتحدثين أو الداعمين أو نظام التسجيل الموجود هنا.",
+    other_event_open_link: "استكشف على فيسبوك",
+    other_event_states_title: "احتفالات الولايات السودانية",
+    other_event_states_text: "ابحث عن صفحات الصيادلة والجهات الصحية في الولايات الأخرى.",
+    other_event_international_title: "منظمات واحتفالات دولية",
+    other_event_international_text: "ابحث عن احتفالات ومنظمات صيدلانية في دول أخرى.",
     donor_hero_name: "وزارة الصحة الاتحادية",
     donor_hero_role: "الإدارة العامة للصيدلة",
     donor_hero_quote: "\u0022نشكر كل داعم ساهم في جعل اليوم العالمي للصيدلي 2026 فعالية تليق بمهنة الصيدلة ورسالتها.\u0022",
@@ -185,6 +196,7 @@ const translations = {
     nav_program: "Program",
     nav_speakers: "Speakers",
     nav_donors: "Supporters",
+    nav_other_events: "Other Celebrations",
     nav_contact: "Contact",
     nav_register: "Registration",
     cta_register: "Register",
@@ -315,6 +327,16 @@ const translations = {
     donors_eyebrow: "Acknowledgment",
     donors_title: "Thank You to Our Supporters",
     donors_text: "With sincere thanks to the organizations that helped make World Pharmacists' Day 2026 possible.",
+    other_events_eyebrow: "Other Celebrations",
+    other_events_title: "Explore Pharmacists' Day Celebrations",
+    other_events_text: "Explore other pages and initiatives to see how they are preparing, and look for a possible Facebook Live stream on the celebration day.",
+    other_events_notice_title: "Important note",
+    other_events_notice_text: "These are separate celebrations and are not part of this website. They may not provide the same program, schedules, speakers, supporters, or registration system available here.",
+    other_event_open_link: "Explore on Facebook",
+    other_event_states_title: "Celebrations in Other Sudanese States",
+    other_event_states_text: "Search for pharmacy pages and health organizations in other states.",
+    other_event_international_title: "International Organizations and Celebrations",
+    other_event_international_text: "Search for pharmacy celebrations and organizations in other countries.",
     donor_hero_name: "Federal Ministry of Health",
     donor_hero_role: "General Directorate of Pharmacy",
     donor_hero_quote: "\u0022We thank every supporter who helped make World Pharmacists' Day 2026 an event worthy of the pharmacy profession and its mission.\u0022",
@@ -381,6 +403,7 @@ function setLanguage(lang) {
 
   renderProgram();
   renderDonors();
+  renderOtherEvents();
   updateRegistrationLock();
 }
 
@@ -651,6 +674,34 @@ function renderDonors() {
       </div>
     </div>`;
   }).join("");
+}
+
+const OTHER_EVENTS_DATA = [
+  {
+    title: { ar: "احتفالات الولايات السودانية", en: "Celebrations in Other Sudanese States" },
+    text: { ar: "ابحث عن صفحات الصيادلة والجهات الصحية في الولايات الأخرى.", en: "Search for pharmacy pages and health organizations in other states." },
+    url: "https://www.facebook.com/search/pages?q=World%20Pharmacists%20Day%20Sudan",
+  },
+  {
+    title: { ar: "منظمات واحتفالات دولية", en: "International Organizations and Celebrations" },
+    text: { ar: "ابحث عن احتفالات ومنظمات صيدلانية في دول أخرى.", en: "Search for pharmacy celebrations and organizations in other countries." },
+    url: "https://www.facebook.com/search/pages?q=World%20Pharmacists%20Day%202026",
+  },
+];
+
+function renderOtherEvents() {
+  const grid = document.getElementById("other-events-grid");
+  if (!grid) return;
+
+  const lang = appState.lang;
+  grid.innerHTML = OTHER_EVENTS_DATA.map((event) => `
+    <article class="other-event-card">
+      <span class="other-event-icon" aria-hidden="true">f</span>
+      <h3>${escapeHtml(event.title[lang])}</h3>
+      <p>${escapeHtml(event.text[lang])}</p>
+      <a href="${escapeHtml(event.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(t("other_event_open_link"))}</a>
+    </article>
+  `).join("");
 }
 
 /* ==========================================================================

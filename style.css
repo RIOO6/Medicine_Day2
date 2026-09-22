@@ -648,6 +648,18 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
 .contact-link strong { font-size: 0.9rem; }
 .contact-link small { margin-top: 0.15rem; color: var(--ink-soft); font-size: 0.72rem; line-height: 1.4; }
 
+/* ==========================================================================\n+   Other celebrations\n+   ========================================================================== */
+.other-celebrations { background: var(--tint-gold); border-block-end: 1px solid var(--line); }
+.other-events-notice { margin: 1.5rem 0; padding: 1rem 1.25rem; border-inline-start: 3px solid var(--gold-deep); border-radius: var(--radius-sm); background: var(--gold-tint); }
+.other-events-notice strong { display: block; color: var(--gold-deep); font-size: 0.9rem; margin-bottom: 0.25rem; }
+.other-events-notice p { margin: 0; color: var(--ink-soft); font-size: 0.85rem; }
+.other-events-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.other-event-card { padding: 1.35rem; background: var(--paper-raised); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
+.other-event-icon { display: grid; place-items: center; width: 2.3rem; height: 2.3rem; margin-bottom: 0.8rem; border-radius: 50%; background: #e8eefb; color: #2455a4; font-family: var(--font-display-en); font-size: 1.25rem; font-weight: 700; }
+.other-event-card h3 { margin-bottom: 0.35rem; }
+.other-event-card p { color: var(--ink-soft); font-size: 0.88rem; }
+.other-event-card a { color: var(--green-800); font-size: 0.86rem; font-weight: 700; }
+
 /* ==========================================================================
    Questions
    ========================================================================== */
@@ -881,6 +893,7 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
 @media (max-width: 960px) {
   .quick-actions-grid, .feature-grid, .speaker-grid, .donors-grid { grid-template-columns: repeat(2, 1fr); }
   .registration-grid, .questions-grid, .contact-grid { grid-template-columns: 1fr; }
+  .other-events-grid { grid-template-columns: 1fr; }
   .contact-links { grid-template-columns: repeat(3, 1fr); }
   .donor-hero { grid-template-columns: 1fr; text-align: center; }
   .donor-hero-body { text-align: center; }
