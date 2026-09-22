@@ -615,6 +615,7 @@ const DONORS_DATA = [
   { name: { ar: "AL-FORQAN", en: "AL-FORQAN" }, representative: { ar: "", en: "" }, logo: "sponsor-5-logo.jpg", photo: "sponsor-5-representative.jpg" },
   { name: { ar: "EL-SHAHBA", en: "EL-SHAHBA" }, representative: { ar: "", en: "" }, logo: "sponsor-6-logo.jpg", photo: "sponsor-6-representative.jpg" },
   { name: { ar: "WAFRAPHARMA", en: "WAFRAPHARMA" }, representative: { ar: "", en: "" }, logo: "sponsor-7-logo.jpg", photo: "sponsor-7-representative.jpg" },
+  { name: { ar: "جامعة كرري", en: "University of Karrara" }, representative: { ar: "دليل الجامعات", en: "University Guide" }, logo: "sponsor-8-logo.jpg", photo: "sponsor-8-representative.png" },
   { name: { ar: "من سيكون التالي؟", en: "Who will be next?" }, representative: { ar: "", en: "" }, logo: "next.svg", photo: "next.svg" },
 ];
 
