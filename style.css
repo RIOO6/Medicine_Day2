@@ -917,6 +917,32 @@ fieldset.form-row { border: none; padding: 0; margin-inline: 0; }
 /* ==========================================================================
    Responsive
    ========================================================================== */
+@media (max-width: 1240px) {
+  .header-inner { gap: 0.75rem; padding-inline: 1rem; }
+  .brand { flex: 1 1 auto; min-width: 0; }
+  .brand-title { font-size: 0.94rem; }
+  .brand-subtitle { display: none; }
+  .main-nav { display: none; }
+  .menu-toggle { display: flex; flex-shrink: 0; }
+  .header-actions .btn-primary { display: none; }
+
+  .site-header.is-open .main-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    inset-inline: 0;
+    background: var(--paper-raised);
+    border-block-end: 1px solid var(--line);
+    padding: 1rem 1.5rem 1.5rem;
+    gap: 0.25rem;
+  }
+  .site-header.is-open .nav-link {
+    padding: 0.6rem 0;
+    border-block-end: 1px solid var(--line);
+  }
+}
+
 @media (max-width: 960px) {
   .quick-actions-grid, .feature-grid, .speaker-grid, .donors-grid { grid-template-columns: repeat(2, 1fr); }
   .registration-grid, .questions-grid, .contact-grid { grid-template-columns: 1fr; }
