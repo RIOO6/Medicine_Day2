@@ -694,9 +694,9 @@ function renderDonors() {
 
 const OTHER_EVENTS_DATA = [
   {
-    title: { ar: "احتفالات الولايات السودانية", en: "Celebrations in Other Sudanese States" },
-    text: { ar: "ابحث عن صفحات الصيادلة والجهات الصحية في الولايات الأخرى.", en: "Search for pharmacy pages and health organizations in other states." },
-    url: "https://www.facebook.com/search/pages?q=World%20Pharmacists%20Day%20Sudan",
+    title: { ar: "احتفالات الولايات السودانية- ولاية الجزيرة", en: "Celebrations in Other Sudanese States - Al-Jazira State" },
+    text: { ar: "تابع احتفال ولاية الجزيرة", en: "Al-Jazira State Celebration" },
+    url: "https://www.facebook.com/share/p/1DQhQpvdfT/",
   },
   {
     title: { ar: "منظمات واحتفالات دولية", en: "International Organizations and Celebrations" },
