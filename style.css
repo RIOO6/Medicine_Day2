@@ -359,7 +359,17 @@ a { color: inherit; }
 
 .hero-text { margin: 0 auto 2rem; color: var(--ink-soft); }
 
-.hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+.hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+
+.hero-credit {
+  margin: 0 auto 3rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+.hero-credit strong {
+  color: var(--green-800);
+  font-weight: 700;
+}
 
 .hero-facts {
   display: grid;
