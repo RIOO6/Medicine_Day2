@@ -197,7 +197,7 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .brand {
@@ -206,7 +206,8 @@ a { color: inherit; }
   gap: 0.75rem;
   text-decoration: none;
   color: var(--ink);
-  min-width: 0;
+  flex: 0 1 300px;
+  min-width: 240px;
 }
 
 .brand-logo {
@@ -219,24 +220,24 @@ a { color: inherit; }
   background: #fff;
 }
 
-.brand-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; overflow: hidden; }
 .brand-title { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; white-space: nowrap; }
 .brand-subtitle { font-size: 0.74rem; color: var(--ink-soft); }
 
-.main-nav { display: flex; gap: 0.4rem; }
+.main-nav { display: flex; flex: 1 1 auto; justify-content: center; gap: 0.15rem; min-width: 0; }
 
 .nav-link {
   text-decoration: none;
   color: var(--ink-soft);
-  font-size: 0.92rem;
+  font-size: 0.84rem;
   font-weight: 600;
-  padding: 0.6rem 0.9rem;
+  padding: 0.55rem 0.55rem;
   border-radius: 999px;
   transition: color 0.15s ease, background 0.15s ease;
 }
 .nav-link:hover { color: var(--green-800); background: var(--green-100); }
 
-.header-actions { display: flex; align-items: center; gap: 0.6rem; }
+.header-actions { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
 
 .lang-toggle {
   appearance: none;
@@ -269,6 +270,32 @@ a { color: inherit; }
 .menu-toggle.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .menu-toggle.is-open span:nth-child(2) { opacity: 0; }
 .menu-toggle.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+@media (max-width: 1120px) {
+  .header-inner { gap: 0.75rem; }
+  .brand { flex: 1 1 auto; min-width: 0; }
+  .brand-title { font-size: 0.98rem; }
+  .main-nav { display: none; }
+  .menu-toggle { display: flex; }
+  .header-actions .btn-primary { display: none; }
+
+  .site-header.is-open .main-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    inset-inline: 0;
+    background: var(--paper-raised);
+    border-block-end: 1px solid var(--line);
+    padding: 1rem 1.5rem 1.5rem;
+    gap: 0.25rem;
+    box-shadow: 0 12px 20px rgba(13, 50, 35, 0.08);
+  }
+  .site-header.is-open .nav-link {
+    padding: 0.6rem 0;
+    border-block-end: 1px solid var(--line);
+  }
+}
 
 /* ==========================================================================
    Hero
