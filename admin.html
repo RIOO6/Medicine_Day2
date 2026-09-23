@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Admin</title>
+<link rel="stylesheet" href="admin.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<main class="admin-shell">
+  <section id="login-view" class="panel login-panel">
+    <p class="eyebrow">Event administration</p>
+    <h1>Registration desk</h1>
+    <p class="intro">Enter the administrator username and password to view registrations.</p>
+    <form id="login-form">
+      <label for="admin-email">Username</label>
+      <input id="admin-email" name="email" type="text" autocomplete="username" required>
+      <label for="admin-password">Password</label>
+      <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+      <button type="submit">Sign in</button>
+      <p id="login-error" class="message error" role="alert"></p>
+    </form>
+  </section>
+
+  <section id="dashboard-view" class="dashboard" hidden>
+    <header class="dashboard-header">
+      <div>
+        <p class="eyebrow">Live registration desk</p>
+        <h1>Participants</h1>
+        <p id="status-message" class="status">Connecting...</p>
+      </div>
+      <button id="logout-button" class="secondary-button" type="button">Sign out</button>
+    </header>
+
+    <div class="toolbar">
+      <strong id="participant-count">0 registrations</strong>
+      <input id="search-input" type="search" placeholder="Search registrations">
+    </div>
+
+    <section class="analysis-grid" aria-label="Registration analysis">
+      <article class="analysis-card"><span>Total registrations</span><strong id="analysis-total">0</strong></article>
+      <article class="analysis-card"><span>Physical attendance</span><strong id="analysis-physical">0</strong></article>
+      <article class="analysis-card"><span>Online attendance</span><strong id="analysis-online">0</strong></article>
+      <article class="analysis-card"><span>Top profession</span><strong id="analysis-profession">-</strong></article>
+    </section>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th><button class="sort-button" type="button" data-sort="full_name">Name <span aria-hidden="true">↕</span></button></th>
+            <th><button class="sort-button" type="button" data-sort="profession">Profession <span aria-hidden="true">↕</span></button></th>
+            <th><button class="sort-button" type="button" data-sort="email">Email <span aria-hidden="true">↕</span></button></th>
+            <th><button class="sort-button" type="button" data-sort="phone">Phone <span aria-hidden="true">↕</span></button></th>
+            <th><button class="sort-button" type="button" data-sort="organization">Organization <span aria-hidden="true">↕</span></button></th>
+            <th><button class="sort-button" type="button" data-sort="attendance_type">Attendance <span aria-hidden="true">↕</span></button></th>
+            <th><button class="sort-button" type="button" data-sort="registration_date">Registered <span aria-hidden="true">↓</span></button></th>
+          </tr>
+        </thead>
+        <tbody id="participants-body"></tbody>
+      </table>
+      <p id="empty-message" class="empty-message">No registrations found.</p>
+    </div>
+  </section>
+</main>
+<script src="supabase-config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
