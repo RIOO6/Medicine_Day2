@@ -34,6 +34,14 @@ function formatDate(value) {
   }).format(new Date(value));
 }
 
+function hasExpired(value) {
+  if (!value) return false;
+  const expiry = /^\d{4}-\d{2}-\d{2}$/.test(value)
+    ? new Date(`${value}T23:59:59.999Z`)
+    : new Date(value);
+  return Number.isNaN(expiry.getTime()) || expiry <= new Date();
+}
+
 function compareParticipants(first, second) {
   const firstValue = first[adminState.sortKey] || "";
   const secondValue = second[adminState.sortKey] || "";
@@ -147,8 +155,19 @@ loginForm.addEventListener("submit", async (event) => {
     .eq("username", username)
     .maybeSingle();
 
-  if (error || !admin || admin.password !== password || new Date(admin.enabled_until) <= new Date()) {
-    loginError.textContent = "The email or password is incorrect, or access has expired.";
+  if (error) {
+    console.error("Admin login query error:", error);
+    loginError.textContent = "Unable to verify the account. Check the Supabase access policy.";
+    return;
+  }
+
+  if (!admin || admin.password !== password) {
+    loginError.textContent = "The username or password is incorrect.";
+    return;
+  }
+
+  if (hasExpired(admin.enabled_until)) {
+    loginError.textContent = "This administrator account is no longer active.";
     return;
   }
 
